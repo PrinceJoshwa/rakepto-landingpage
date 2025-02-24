@@ -1,0 +1,1484 @@
+{
+    "United Kingdom": [
+      {
+        "id": "uk1",
+        "name": "Ravensbourne University London",
+        "location": "London",
+        "ranking": 1001,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "courses": [
+          {
+            "id": "uk1c1",
+            "name": "MA Design Products",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Design"
+          },
+          {
+            "id": "uk1c2",
+            "name": "MSc Digital Technology",
+            "duration": "1 year",
+            "tuition": "£16,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk1c3",
+            "name": "MA Fashion",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Fashion"
+          }
+        ]
+      },
+      {
+        "id": "uk2",
+        "name": "University of East London",
+        "location": "London",
+        "ranking": 801,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university3_jsgfnv.jpg",
+        "courses": [
+          {
+            "id": "uk2c1",
+            "name": "MSc International Business Management",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk2c2",
+            "name": "MSc Cyber Security",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk2c3",
+            "name": "MA Counselling and Psychotherapy",
+            "duration": "1 year",
+            "tuition": "£13,500/year",
+            "area": "Psychology"
+          }
+        ]
+      },
+      {
+        "id": "uk3",
+        "name": "University of Greenwich",
+        "location": "London",
+        "ranking": 701,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university17_itz72m.jpg",
+        "courses": [
+          {
+            "id": "uk3c1",
+            "name": "MBA International Business",
+            "duration": "1 year",
+            "tuition": "£16,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk3c2",
+            "name": "MSc Computer Science",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk3c3",
+            "name": "MA Architecture",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Architecture"
+          }
+        ]
+      },
+      {
+        "id": "uk4",
+        "name": "UWTSD",
+        "location": "Swansea",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university16_icawji.jpg",
+        "courses": [
+          {
+            "id": "uk4c1",
+            "name": "MA Creative Writing",
+            "duration": "1 year",
+            "tuition": "£13,000/year",
+            "area": "Arts"
+          },
+          {
+            "id": "uk4c2",
+            "name": "MSc Sustainable Engineering",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Engineering"
+          },
+          {
+            "id": "uk4c3",
+            "name": "MBA International Hotel Management",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "uk5",
+        "name": "University of Roehampton",
+        "location": "London",
+        "ranking": 751,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university4_pbqaqb.jpg",
+        "courses": [
+          {
+            "id": "uk5c1",
+            "name": "MSc Psychology",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Psychology"
+          },
+          {
+            "id": "uk5c2",
+            "name": "MA Journalism",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Media"
+          },
+          {
+            "id": "uk5c3",
+            "name": "MSc Global Marketing",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "uk6",
+        "name": "Salford University",
+        "location": "Salford",
+        "ranking": 801,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university5_yjkfp7.jpg",
+        "courses": [
+          {
+            "id": "uk6c1",
+            "name": "MSc Data Science",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk6c2",
+            "name": "MA Terrorism and Security",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Social Sciences"
+          },
+          {
+            "id": "uk6c3",
+            "name": "MSc Project Management",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "uk7",
+        "name": "University of Chester",
+        "location": "Chester",
+        "ranking": 1001,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university18_huaxfx.jpg",
+        "courses": [
+          {
+            "id": "uk7c1",
+            "name": "MBA",
+            "duration": "1 year",
+            "tuition": "£13,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk7c2",
+            "name": "MSc Cybersecurity",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk7c3",
+            "name": "MA International Relations",
+            "duration": "1 year",
+            "tuition": "£13,000/year",
+            "area": "Social Sciences"
+          }
+        ]
+      },
+      {
+        "id": "uk8",
+        "name": "Anglia Ruskin University",
+        "location": "Cambridge",
+        "ranking": 351,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university6_lxgo5p.jpg",
+        "courses": [
+          {
+            "id": "uk8c1",
+            "name": "MSc Computer Science",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk8c2",
+            "name": "MA Illustration and Book Arts",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Arts"
+          },
+          {
+            "id": "uk8c3",
+            "name": "MSc Project Management",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "uk9",
+        "name": "Ulster University",
+        "location": "Northern Ireland",
+        "ranking": 601,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university7_dq8s8y.jpg",
+        "courses": [
+          {
+            "id": "uk9c1",
+            "name": "MSc Marketing",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk9c2",
+            "name": "MSc Artificial Intelligence",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk9c3",
+            "name": "MA Photography",
+            "duration": "1 year",
+            "tuition": "£13,500/year",
+            "area": "Arts"
+          }
+        ]
+      },
+      {
+        "id": "uk10",
+        "name": "Northumbria University",
+        "location": "Newcastle upon Tyne",
+        "ranking": 401,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university8_rgchdj.jpg",
+        "courses": [
+          {
+            "id": "uk10c1",
+            "name": "MSc Business with International Management",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk10c2",
+            "name": "MSc Cyber Security",
+            "duration": "1 year",
+            "tuition": "£16,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk10c3",
+            "name": "MA Design",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Design"
+          }
+        ]
+      },
+      {
+        "id": "uk11",
+        "name": "University of Portsmouth",
+        "location": "Portsmouth",
+        "ranking": 601,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university20_puml92.jpg",
+        "courses": [
+          {
+            "id": "uk11c1",
+            "name": "MSc International Business and Management",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk11c2",
+            "name": "MSc Cybercrime and Digital Investigation",
+            "duration": "1 year",
+            "tuition": "£16,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk11c3",
+            "name": "MA Illustration",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Arts"
+          }
+        ]
+      },
+      {
+        "id": "uk12",
+        "name": "De Montfort University",
+        "location": "Leicester",
+        "ranking": 601,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164691/university12_w4wxyn.jpg",
+        "courses": [
+          {
+            "id": "uk12c1",
+            "name": "MBA Global",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk12c2",
+            "name": "MSc Information Systems Management",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk12c3",
+            "name": "MA Fashion and Textiles",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Fashion"
+          }
+        ]
+      },
+      {
+        "id": "uk13",
+        "name": "Coventry University",
+        "location": "Coventry",
+        "ranking": 541,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164690/university21_oki852.jpg",
+        "courses": [
+          {
+            "id": "uk13c1",
+            "name": "MBA",
+            "duration": "1 year",
+            "tuition": "£16,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk13c2",
+            "name": "MSc Data Science and Computational Intelligence",
+            "duration": "1 year",
+            "tuition": "£16,500/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk13c3",
+            "name": "MA Automotive and Transport Design",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Design"
+          }
+        ]
+      },
+      {
+        "id": "uk14",
+        "name": "University of Hertfordshire",
+        "location": "Hatfield",
+        "ranking": 801,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university19_c8hrac.jpg",
+        "courses": [
+          {
+            "id": "uk14c1",
+            "name": "MSc Business Analytics and Consultancy",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk14c2",
+            "name": "MSc Computer Science",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk14c3",
+            "name": "MA Animation",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Arts"
+          }
+        ]
+      },
+      {
+        "id": "uk15",
+        "name": "University of Hull",
+        "location": "Hull",
+        "ranking": 601,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164691/university14_trhabo.jpg",
+        "courses": [
+          {
+            "id": "uk15c1",
+            "name": "MSc Financial Management",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk15c2",
+            "name": "MSc Artificial Intelligence and Robotics",
+            "duration": "1 year",
+            "tuition": "£16,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk15c3",
+            "name": "MA Creative Writing",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Arts"
+          }
+        ]
+      },
+      {
+        "id": "uk16",
+        "name": "Middlesex University",
+        "location": "London",
+        "ranking": 401,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_35_aijghw.jpg",
+        "courses": [
+          {
+            "id": "uk16c1",
+            "name": "MBA",
+            "duration": "1 year",
+            "tuition": "£16,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk16c2",
+            "name": "MSc Computer Networks and Security",
+            "duration": "1 year",
+            "tuition": "£15,500/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk16c3",
+            "name": "MA Graphic Design",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Design"
+          }
+        ]
+      },
+      {
+        "id": "uk17",
+        "name": "York St John University",
+        "location": "York",
+        "ranking": 1001,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_33_k6ahpr.jpg",
+        "courses": [
+          {
+            "id": "uk17c1",
+            "name": "MBA Leadership",
+            "duration": "1 year",
+            "tuition": "£13,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk17c2",
+            "name": "MSc Digital Marketing",
+            "duration": "1 year",
+            "tuition": "£13,500/year",
+            "area": "Marketing"
+          },
+          {
+            "id": "uk17c3",
+            "name": "MA Applied Theatre",
+            "duration": "1 year",
+            "tuition": "£12,500/year",
+            "area": "Arts"
+          }
+        ]
+      },
+      {
+        "id": "uk18",
+        "name": "Buckinghamshire New University",
+        "location": "High Wycombe",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165410/image_40_ojvlqp.jpg",
+        "courses": [
+          {
+            "id": "uk18c1",
+            "name": "MSc Organisational Resilience",
+            "duration": "1 year",
+            "tuition": "£12,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk18c2",
+            "name": "MA Advertising",
+            "duration": "1 year",
+            "tuition": "£13,000/year",
+            "area": "Marketing"
+          },
+          {
+            "id": "uk18c3",
+            "name": "MSc Public Health Nutrition",
+            "duration": "1 year",
+            "tuition": "£13,500/year",
+            "area": "Health Sciences"
+          }
+        ]
+      },
+      {
+        "id": "uk19",
+        "name": "University College Birmingham (UCB)",
+        "location": "Birmingham",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165410/image_41_rt5fhi.jpg",
+        "courses": [
+          {
+            "id": "uk19c1",
+            "name": "MSc Enterprise Management",
+            "duration": "1 year",
+            "tuition": "£12,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk19c2",
+            "name": "MSc Culinary Arts Management",
+            "duration": "1 year",
+            "tuition": "£12,500/year",
+            "area": "Hospitality"
+          },
+          {
+            "id": "uk19c3",
+            "name": "MA International Tourism Business Management",
+            "duration": "1 year",
+            "tuition": "£13,000/year",
+            "area": "Tourism"
+          }
+        ]
+      },
+      {
+        "id": "uk20",
+        "name": "Solent University",
+        "location": "Southampton",
+        "ranking": 1001,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164691/university12_w4wxyn.jpg",
+        "courses": [
+          {
+            "id": "uk20c1",
+            "name": "MSc Digital Design",
+            "duration": "1 year",
+            "tuition": "£13,500/year",
+            "area": "Design"
+          },
+          {
+            "id": "uk20c2",
+            "name": "MA Sports Broadcast Journalism",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Media"
+          },
+          {
+            "id": "uk20c3",
+            "name": "MSc Cyber Security Engineering",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Computer Science and IT"
+          }
+        ]
+      },
+      {
+        "id": "uk21",
+        "name": "Aston University",
+        "location": "Birmingham",
+        "ranking": 451,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university6_lxgo5p.jpg",
+        "courses": [
+          {
+            "id": "uk21c1",
+            "name": "MSc Business Analytics",
+            "duration": "1 year",
+            "tuition": "£16,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk21c2",
+            "name": "MSc Artificial Intelligence",
+            "duration": "1 year",
+            "tuition": "£17,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk21c3",
+            "name": "MSc Supply Chain Management",
+            "duration": "1 year",
+            "tuition": "£16,500/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "uk22",
+        "name": "Edinburgh Napier University",
+        "location": "Edinburgh",
+        "ranking": 801,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university4_pbqaqb.jpg",
+        "courses": [
+          {
+            "id": "uk22c1",
+            "name": "MBA",
+            "duration": "1 year",
+            "tuition": "£14,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk22c2",
+            "name": "MSc Computing",
+            "duration": "1 year",
+            "tuition": "£15,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk22c3",
+            "name": "MSc Marketing with Festival and Event Management",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Marketing"
+          }
+        ]
+      },
+      {
+        "id": "uk23",
+        "name": "University of Leicester",
+        "location": "Leicester",
+        "ranking": 301,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "courses": [
+          {
+            "id": "uk23c1",
+            "name": "MSc Financial Economics",
+            "duration": "1 year",
+            "tuition": "£17,000/year",
+            "area": "Economics"
+          },
+          {
+            "id": "uk23c2",
+            "name": "MSc Advanced Computer Science",
+            "duration": "1 year",
+            "tuition": "£18,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk23c3",
+            "name": "MA Mass Communications",
+            "duration": "1 year",
+            "tuition": "£16,500/year",
+            "area": "Media"
+          }
+        ]
+      },
+      {
+        "id": "uk24",
+        "name": "University of Bedfordshire",
+        "location": "Luton",
+        "ranking": 1001,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university16_icawji.jpg",
+        "courses": [
+          {
+            "id": "uk24c1",
+            "name": "MBA",
+            "duration": "1 year",
+            "tuition": "£13,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk24c2",
+            "name": "MSc Computer Security and Forensics",
+            "duration": "1 year",
+            "tuition": "£14,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk24c3",
+            "name": "MA International Relations",
+            "duration": "1 year",
+            "tuition": "£13,000/year",
+            "area": "Social Sciences"
+          }
+        ]
+      },
+      {
+        "id": "uk25",
+        "name": "Teesside University",
+        "location": "Middlesbrough",
+        "ranking": 801,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165416/image_29_yccpkg.jpg",
+        "courses": [
+          {
+            "id": "uk25c1",
+            "name": "MSc Project Management",
+            "duration": "1 year",
+            "tuition": "£13,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk25c2",
+            "name": "MSc Cybersecurity",
+            "duration": "1 year",
+            "tuition": "£13,500/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk25c3",
+            "name": "MA 3D Animation",
+            "duration": "1 year",
+            "tuition": "£12,500/year",
+            "area": "Arts"
+          }
+        ]
+      },
+      {
+        "id": "uk26",
+        "name": "Royal Holloway, University of London",
+        "location": "Egham",
+        "ranking": 251,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_33_k6ahpr.jpg",
+        "courses": [
+          {
+            "id": "uk26c1",
+            "name": "MSc International Management",
+            "duration": "1 year",
+            "tuition": "£18,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "uk26c2",
+            "name": "MSc Machine Learning",
+            "duration": "1 year",
+            "tuition": "£19,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "uk26c3",
+            "name": "MA Screenwriting for Television and Film",
+            "duration": "1 year",
+            "tuition": "£17,500/year",
+            "area": "Media"
+          }
+        ]
+      }
+    ],
+    "United States": [
+      {
+        "id": "us1",
+        "name": "Arizona State University",
+        "location": "Tempe, AZ",
+        "ranking": 205,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "courses": [
+          {
+            "id": "us1c1",
+            "name": "Master of Business Analytics",
+            "duration": "1 year",
+            "tuition": "$40,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "us1c2",
+            "name": "Computer Engineering MS",
+            "duration": "2 years",
+            "tuition": "$45,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "us1c3",
+            "name": "Sustainability Solutions MSTech",
+            "duration": "2 years",
+            "tuition": "$42,000/year",
+            "area": "Environmental Science"
+          }
+        ]
+      },
+      {
+        "id": "us2",
+        "name": "University of Massachusetts Boston",
+        "location": "Boston, MA",
+        "ranking": 701,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university17_itz72m.jpg",
+        "courses": [
+          {
+            "id": "us2c1",
+            "name": "MBA in Healthcare Management",
+            "duration": "2 years",
+            "tuition": "$35,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "us2c2",
+            "name": "MS in Environmental Sciences",
+            "duration": "2 years",
+            "tuition": "$30,000/year",
+            "area": "Environmental Science"
+          },
+          {
+            "id": "us2c3",
+            "name": "MA in Applied Linguistics",
+            "duration": "2 years",
+            "tuition": "$28,000/year",
+            "area": "Linguistics"
+          }
+        ]
+      },
+      {
+        "id": "us3",
+        "name": "University of North Texas",
+        "location": "Denton, TX",
+        "ranking": 651,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university5_yjkfp7.jpg",
+        "courses": [
+          {
+            "id": "us3c1",
+            "name": "Master of Science in Data Science",
+            "duration": "2 years",
+            "tuition": "$38,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "us3c2",
+            "name": "Master of Music",
+            "duration": "2 years",
+            "tuition": "$32,000/year",
+            "area": "Arts"
+          },
+          {
+            "id": "us3c3",
+            "name": "MS in Engineering Technology",
+            "duration": "2 years",
+            "tuition": "$36,000/year",
+            "area": "Engineering"
+          }
+        ]
+      },
+      {
+        "id": "us4",
+        "name": "University of Massachusetts Amherst",
+        "location": "Amherst, MA",
+        "ranking": 301,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "courses": [
+          {
+            "id": "us4c1",
+            "name": "MS in Computer Science",
+            "duration": "2 years",
+            "tuition": "$42,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "us4c2",
+            "name": "MBA",
+            "duration": "2 years",
+            "tuition": "$45,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "us4c3",
+            "name": "MS in Polymer Science and Engineering",
+            "duration": "2 years",
+            "tuition": "$40,000/year",
+            "area": "Engineering"
+          }
+        ]
+      },
+      {
+        "id": "us5",
+        "name": "Long Island University",
+        "location": "Brooklyn, NY",
+        "ranking": 1001,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university18_huaxfx.jpg",
+        "courses": [
+          {
+            "id": "us5c1",
+            "name": "MS in Pharmacy",
+            "duration": "2 years",
+            "tuition": "$38,000/year",
+            "area": "Medicine"
+          },
+          {
+            "id": "us5c2",
+            "name": "MFA in Writing and Producing for Television",
+            "duration": "2 years",
+            "tuition": "$35,000/year",
+            "area": "Arts"
+          },
+          {
+            "id": "us5c3",
+            "name": "MS in Artificial Intelligence",
+            "duration": "2 years",
+            "tuition": "$40,000/year",
+            "area": "Computer Science and IT"
+          }
+        ]
+      },
+      {
+        "id": "us6",
+        "name": "University of New Haven",
+        "location": "West Haven, CT",
+        "ranking": 801,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university19_c8hrac.jpg",
+        "courses": [
+          {
+            "id": "us6c1",
+            "name": "MS in Cybersecurity and Networks",
+            "duration": "2 years",
+            "tuition": "$36,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "us6c2",
+            "name": "MBA",
+            "duration": "1 year",
+            "tuition": "$38,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "us6c3",
+            "name": "MS in Environmental Engineering",
+            "duration": "2 years",
+            "tuition": "$35,000/year",
+            "area": "Engineering"
+          }
+        ]
+      },
+      {
+        "id": "us7",
+        "name": "Florida Atlantic University",
+        "location": "Boca Raton, FL",
+        "ranking": 601,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165409/image_42_sijymi.jpg",
+        "courses": [
+          {
+            "id": "us7c1",
+            "name": "MS in Business Analytics",
+            "duration": "16 months",
+            "tuition": "$30,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "us7c2",
+            "name": "MS in Computer Science",
+            "duration": "2 years",
+            "tuition": "$32,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "us7c3",
+            "name": "MFA in Visual Arts",
+            "duration": "3 years",
+            "tuition": "$28,000/year",
+            "area": "Arts"
+          }
+        ]
+      },
+      {
+        "id": "us8",
+        "name": "University of Illinois Springfield",
+        "location": "Springfield, IL",
+        "ranking": 1001,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_34_psu8nb.jpg",
+        "courses": [
+          {
+            "id": "us8c1",
+            "name": "MBA",
+            "duration": "1-2 years",
+            "tuition": "$25,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "us8c2",
+            "name": "MS in Data Analytics",
+            "duration": "1-2 years",
+            "tuition": "$26,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "us8c3",
+            "name": "MA in Public Affairs Reporting",
+            "duration": "1 year",
+            "tuition": "$24,000/year",
+            "area": "Media"
+          }
+        ]
+      },
+      {
+        "id": "us9",
+        "name": "Hult International Business School",
+        "location": "Cambridge, MA",
+        "ranking": 801,
+        "image": "https://placehold.co/400x300",
+        "courses": [
+          {
+            "id": "us9c1",
+            "name": "Global One-Year MBA",
+            "duration": "1 year",
+            "tuition": "$75,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "us9c2",
+            "name": "Masters in International Business",
+            "duration": "1 year",
+            "tuition": "$46,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "us9c3",
+            "name": "Masters in Finance",
+            "duration": "1 year",
+            "tuition": "$48,000/year",
+            "area": "Finance"
+          }
+        ]
+      },
+      {
+        "id": "us10",
+        "name": "Queens College",
+        "location": "Queens, NY",
+        "ranking": 801,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_35_aijghw.jpg",
+        "courses": [
+          {
+            "id": "us10c1",
+            "name": "MA in Applied Linguistics",
+            "duration": "2 years",
+            "tuition": "$20,000/year",
+            "area": "Linguistics"
+          },
+          {
+            "id": "us10c2",
+            "name": "MS in Computer Science",
+            "duration": "2 years",
+            "tuition": "$22,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "us10c3",
+            "name": "MFA in Creative Writing",
+            "duration": "2 years",
+            "tuition": "$19,000/year",
+            "area": "Arts"
+          }
+        ]
+      }
+    ],
+    "Ireland": [
+      {
+        "id": "ie1",
+        "name": "Dublin Business School",
+        "location": "Dublin",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_33_k6ahpr.jpg",
+        "courses": [
+          {
+            "id": "ie1c1",
+            "name": "MBA in Cloud Computing",
+            "duration": "1 year",
+            "tuition": "€14,500/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "ie1c2",
+            "name": "MSc in Information Systems with Computing",
+            "duration": "1 year",
+            "tuition": "€13,500/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "ie1c3",
+            "name": "MA in Addiction Studies",
+            "duration": "1 year",
+            "tuition": "€12,500/year",
+            "area": "Social Sciences"
+          }
+        ]
+      },
+      {
+        "id": "ie2",
+        "name": "Griffith College Dublin",
+        "location": "Dublin",
+        "ranking": 1201,
+        "image": "https://placehold.co/400x300",
+        "courses": [
+          {
+            "id": "ie2c1",
+            "name": "MSc in International Business Management",
+            "duration": "1 year",
+            "tuition": "€13,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "ie2c2",
+            "name": "MSc in Big Data Management and Analytics",
+            "duration": "1 year",
+            "tuition": "€14,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "ie2c3",
+            "name": "MA in Journalism and Media Communications",
+            "duration": "1 year",
+            "tuition": "€12,500/year",
+            "area": "Media"
+          }
+        ]
+      }
+    ],
+    "Germany": [
+      {
+        "id": "de1",
+        "name": "BSBI",
+        "location": "Berlin",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165416/image_30_vo1igl.jpg",
+        "courses": [
+          {
+            "id": "de1c1",
+            "name": "MA in International Tourism, Hospitality and Event Management",
+            "duration": "18 months",
+            "tuition": "€11,000/year",
+            "area": "Tourism and Hospitality"
+          },
+          {
+            "id": "de1c2",
+            "name": "MSc in Data Analytics",
+            "duration": "18 months",
+            "tuition": "€12,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "de1c3",
+            "name": "MA in Strategic Marketing",
+            "duration": "18 months",
+            "tuition": "€11,500/year",
+            "area": "Marketing"
+          }
+        ]
+      },
+      {
+        "id": "de2",
+        "name": "Arden University",
+        "location": "Berlin",
+        "ranking": 1201,
+        "image": "https://placehold.co/400x300",
+        "courses": [
+          {
+            "id": "de2c1",
+            "name": "MSc in Project Management",
+            "duration": "1 year",
+            "tuition": "€10,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "de2c2",
+            "name": "MSc in IT Security Management",
+            "duration": "1 year",
+            "tuition": "€11,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "de2c3",
+            "name": "MBA",
+            "duration": "1 year",
+            "tuition": "€12,000/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "de3",
+        "name": "Munich Business School",
+        "location": "Munich",
+        "ranking": 1001,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165417/image_28_boiycg.jpg",
+        "courses": [
+          {
+            "id": "de3c1",
+            "name": "Master in International Business",
+            "duration": "2 years",
+            "tuition": "€14,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "de3c2",
+            "name": "Master in Sports Business and Communication",
+            "duration": "2 years",
+            "tuition": "€13,500/year",
+            "area": "Sports Management"
+          },
+          {
+            "id": "de3c3",
+            "name": "Master in Innovation and Entrepreneurship",
+            "duration": "2 years",
+            "tuition": "€14,500/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "de4",
+        "name": "University of Applied Science Europe",
+        "location": "Berlin",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165416/image_29_yccpkg.jpg",
+        "courses": [
+          {
+            "id": "de4c1",
+            "name": "MA in Digital Marketing",
+            "duration": "2 years",
+            "tuition": "€12,000/year",
+            "area": "Marketing"
+          },
+          {
+            "id": "de4c2",
+            "name": "BA in International Management",
+            "duration": "3 years",
+            "tuition": "€10,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "de4c3",
+            "name": "MA in Sports Management",
+            "duration": "2 years",
+            "tuition": "€11,500/year",
+            "area": "Sports Management"
+          }
+        ]
+      },
+      {
+        "id": "de5",
+        "name": "Lancaster University",
+        "location": "Leipzig",
+        "ranking": 135,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "courses": [
+          {
+            "id": "de5c1",
+            "name": "MSc in Logistics and Supply Chain Management",
+            "duration": "1 year",
+            "tuition": "€15,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "de5c2",
+            "name": "MSc in Software Engineering",
+            "duration": "1 year",
+            "tuition": "€16,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "de5c3",
+            "name": "MSc in International Business and Strategy",
+            "duration": "1 year",
+            "tuition": "€15,500/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "de6",
+        "name": "GISMA",
+        "location": "Berlin",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university3_jsgfnv.jpg",
+        "courses": [
+          {
+            "id": "de6c1",
+            "name": "Global MBA",
+            "duration": "1 year",
+            "tuition": "€22,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "de6c2",
+            "name": "MSc in Corporate Financial Management",
+            "duration": "1 year",
+            "tuition": "€18,000/year",
+            "area": "Finance"
+          },
+          {
+            "id": "de6c3",
+            "name": "MSc in Leadership and Human Resource Management",
+            "duration": "1 year",
+            "tuition": "€17,000/year",
+            "area": "Business and Management"
+          }
+        ]
+      }
+    ],
+    "France": [
+      {
+        "id": "fr1",
+        "name": "Paris School of Business",
+        "location": "Paris",
+        "ranking": 801,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university16_icawji.jpg",
+        "courses": [
+          {
+            "id": "fr1c1",
+            "name": "MSc in International Business",
+            "duration": "1 year",
+            "tuition": "€18,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "fr1c2",
+            "name": "MSc in Digital Marketing and Data Analytics",
+            "duration": "1 year",
+            "tuition": "€19,000/year",
+            "area": "Marketing"
+          },
+          {
+            "id": "fr1c3",
+            "name": "MSc in Finance",
+            "duration": "1 year",
+            "tuition": "€20,000/year",
+            "area": "Finance"
+          }
+        ]
+      },
+      {
+        "id": "fr2",
+        "name": "BSBI Paris",
+        "location": "Paris",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university4_pbqaqb.jpg",
+        "courses": [
+          {
+            "id": "fr2c1",
+            "name": "MA in Fashion Retail and Luxury Management",
+            "duration": "18 months",
+            "tuition": "€15,000/year",
+            "area": "Fashion and Luxury"
+          },
+          {
+            "id": "fr2c2",
+            "name": "MSc in Finance and Investment",
+            "duration": "18 months",
+            "tuition": "€16,000/year",
+            "area": "Finance"
+          },
+          {
+            "id": "fr2c3",
+            "name": "MBA",
+            "duration": "18 months",
+            "tuition": "€17,000/year",
+            "area": "Business and Management"
+          }
+        ]
+      },
+      {
+        "id": "fr3",
+        "name": "Neoma Business School",
+        "location": "Reims",
+        "ranking": 401,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university18_huaxfx.jpg",
+        "courses": [
+          {
+            "id": "fr3c1",
+            "name": "Master in Management",
+            "duration": "2 years",
+            "tuition": "€21,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "fr3c2",
+            "name": "MSc in Marketing French Excellence",
+            "duration": "1 year",
+            "tuition": "€19,000/year",
+            "area": "Marketing"
+          },
+          {
+            "id": "fr3c3",
+            "name": "MSc in International Financial Analysis",
+            "duration": "1 year",
+            "tuition": "€20,000/year",
+            "area": "Finance"
+          }
+        ]
+      },
+      {
+        "id": "fr4",
+        "name": "SKEMA Business School",
+        "location": "Paris",
+        "ranking": 501,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164691/university12_w4wxyn.jpg",
+        "courses": [
+          {
+            "id": "fr4c1",
+            "name": "MSc in Artificial Intelligence for Business Transformation",
+            "duration": "1 year",
+            "tuition": "€22,000/year",
+            "area": "Computer Science and IT"
+          },
+          {
+            "id": "fr4c2",
+            "name": "MSc in Financial Markets and Investments",
+            "duration": "1 year",
+            "tuition": "€21,000/year",
+            "area": "Finance"
+          },
+          {
+            "id": "fr4c3",
+            "name": "Global MBA",
+            "duration": "1 year",
+            "tuition": "€25,000/year",
+            "area": "Business and Management"
+          }
+        ]
+      }
+    ],
+    "Singapore": [
+      {
+        "id": "sg1",
+        "name": "London School of Business and Finance",
+        "location": "Singapore",
+        "ranking": 1201,
+        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_34_psu8nb.jpg",
+        "courses": [
+          {
+            "id": "sg1c1",
+            "name": "Global MBA",
+            "duration": "18 months",
+            "tuition": "S$30,000/year",
+            "area": "Business and Management"
+          },
+          {
+            "id": "sg1c2",
+            "name": "MSc in Finance",
+            "duration": "1 year",
+            "tuition": "S$28,000/year",
+            "area": "Finance"
+          },
+          {
+            "id": "sg1c3",
+            "name": "Postgraduate Diploma in Business Administration",
+            "duration": "9 months",
+            "tuition": "S$25,000/year",
+            "area": "Business and Management"
+          }
+        ]
+      }
+    ]
+  }
