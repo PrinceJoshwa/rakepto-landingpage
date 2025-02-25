@@ -163,8 +163,9 @@ function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             // className="fixed inset-0 bg-blue-900 z-40 md:hidden"
-            className="fixed inset-0 bg-blue-900 z-40 md:hidden overflow-y-auto">
-            onClick={() => setMenuOpen(false)} // Close menu when clicking outside
+            className="fixed inset-0 bg-blue-900 z-40 md:hidden overflow-y-auto"
+            onClick={() => setMenuOpen(false)}  //Close menu when clicking outside
+            >
             <nav className="flex flex-col items-center justify-center h-[calc(100vh-80px)]">
               <Link
                 to={isStandalonePage ? '/#hero' : '#hero'}
