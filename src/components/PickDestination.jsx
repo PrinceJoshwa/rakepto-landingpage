@@ -208,11 +208,11 @@ export default function PickDestination() {
           {/* Center Column */}
           <div className="flex items-center justify-center my-6 lg:my-0">
             <motion.button
-              className="bg-white text-blue-900 px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl"
+              className="bg-blue-900 text-blue-900 px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View more
+              {/* View more */}
             </motion.button>
           </div>
 

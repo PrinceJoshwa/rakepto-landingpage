@@ -17,7 +17,7 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isStandalonePage = ['/course-finder', '/test-preparation', '/education-loan'].includes(location.pathname);
+  const isStandalonePage = ['/course-finder', '/test-preparation', '/education-loan', '/scholarship'].includes(location.pathname);
 
   const handleNavigation = (hash) => {
     const element = document.querySelector(hash);

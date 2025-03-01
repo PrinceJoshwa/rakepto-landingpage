@@ -1,7 +1,8 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { Check, Globe2, GraduationCap, Users2, Building2, BookOpen, Wallet } from "lucide-react"
+import { Check, Globe2, GraduationCap, Users2, Building2, BookOpen, Wallet, CircleDollarSign } from "lucide-react"
 import { Link } from "react-router-dom"
 import { useRef } from "react"
 
@@ -28,6 +29,40 @@ export default function EducationLoan() {
   })
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
+  const [isLoading, setIsLoading] = useState(true)
+
+  // Simulate loading effect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 800)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Loading screen
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center">
+          <motion.div
+            animate={{
+              rotate: 360,
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              rotate: { duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "linear" },
+              scale: { duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+            }}
+            className="w-16 h-16 mx-auto mb-4"
+          >
+            <CircleDollarSign size={64} className="text-blue-900" />
+          </motion.div>
+          <h2 className="text-xl font-semibold text-blue-900">Loading Education Loan...</h2>
+        </motion.div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen" ref={ref}>
