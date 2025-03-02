@@ -261,7 +261,7 @@ function Contact() {
   }
 
   return (
-    <section className="min-h-screen py-20 relative overflow-hidden bg-gradient-to-b ">
+    <section className="min-h-screen py-8 relative overflow-hidden bg-gradient-to-b ">
       {/* Animated background text */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <RunningText text="CONTACT US MESSAGE CONNECT REACH OUT" speed={30} direction={1} />
