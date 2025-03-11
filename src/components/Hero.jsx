@@ -5,6 +5,8 @@ import { motion, useSpring } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import bgimg1 from "../assets/confused1.jpg"
+import { Helmet } from "react-helmet" // Import Helmet for meta tags
+
 
 const CountUp = ({ end, duration = 2 }) => {
   const [count, setCount] = useState(0)
@@ -41,9 +43,53 @@ export default function Hero() {
     navigate("/course-finder")
   }
 
+    // Meta data from the image
+    const metaTitle = "Study Abroad Consultants | Scholarships | Exams | Study Loan"
+    const metaDescription = "Find study abroad consultants near me. Explore scholarships, exams (IELTS, TOEFL), and study loan options for abroad education."
+    const focusKeywords = [
+      "study abroad",
+      "study abroad consultants",
+      "how to get scholarship to study abroad",
+      "study abroad consultants near me",
+      "education loan for abroad studies",
+      "study abroad scholarships",
+      "best countries to study abroad",
+      "study abroad consultants in chennai",
+      "study abroad consultants in delhi",
+      "study abroad consultants in kerala",
+      "study abroad near me",
+      "student loans for studying abroad",
+      "study abroad consultants in bangalore",
+      "study abroad consultants in hyderabad",
+      "study abroad consultants in mumbai",
+      "study loan for abroad",
+      "exams to study abroad",
+    ]    
+  // Statistics with colors
+  const statistics = [
+    // { end: 1500, label: "universities", suffix: "+", color: "bg-blue-100 border-blue-300 text-blue-800" },
+    { end: 1500, label: "universities", suffix: "+", color: "bg-blue-700 border-orange-400 text-white" },
+    // { end: 1, label: "courses", suffix: "L+", color: "bg-indigo-100 border-indigo-300 text-indigo-800" },
+    { end: 1, label: "courses", suffix: "L+", color: "bg-blue-700 border-orange-400 text-white" },
+    // { end: 34, label: "countries", color: "bg-purple-100 border-purple-300 text-purple-800" },
+    { end: 34, label: "countries", color: "bg-blue-700 border-orange-400 text-white" },
+  ]
+
   return (
+    <>
+          {/* Add Meta Tags using Helmet */}
+          <Helmet>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={focusKeywords.join(", ")} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+      </Helmet>
     <div id="hero" className="min-h-screen bg-white overflow-hidden">
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-20 sm:pt-24 lg:pt-20">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-20 sm:pt-24 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6 sm:space-y-8">
@@ -55,24 +101,20 @@ export default function Hero() {
               way.
             </p>
 
-            {/* Stats Grid */}
+            {/* Stats Grid with Colors */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-              {[
-                { end: 1500, label: "universities", suffix: "+" },
-                { end: 1, label: "courses", suffix: "L+" },
-                { end: 34, label: "countries" },
-              ].map((stat, index) => (
+              {statistics.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="text-center p-3 sm:p-4 border-2 border-blue-200 rounded-lg shadow-md bg-white"
+                  className={`text-center p-3 sm:p-4 border-2 rounded-lg shadow-md ${stat.color}`}
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-900">
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold">
                     <CountUp end={stat.end} />
                     {stat.suffix}
                   </div>
-                  <div className="text-xs sm:text-sm text-gray-600">{stat.label}</div>
+                  <div className="text-xs sm:text-sm">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -185,6 +227,7 @@ export default function Hero() {
         </div>
       </main>
     </div>
+    </>
   )
 }
 

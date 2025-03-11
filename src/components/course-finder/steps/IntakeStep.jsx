@@ -36,12 +36,12 @@
 
 import React from 'react'
 
-const INTAKE_PERIODS = [
-  'Jan - Mar 2025',
+const INTAKE_PERIODS = [,
   'Apr - Jun 2025',
   'Jul - Sep 2025',
   'Oct - Dec 2025',
   'Jan - Mar 2026',
+  'Apr - Jun 2026',
   'Not Decided'
 ]
 
@@ -55,7 +55,7 @@ export default function IntakeStep({ formData, setFormData, onNext }) {
           className={`p-4 rounded-lg border ${
             formData.intake === intake
               ? 'border-orange-600 bg-orange-50'
-              : 'border-gray-200'
+              : 'border-blue-200 bg-blue-50'
           }`}
           onClick={() => {
             setFormData(prev => ({ ...prev, intake }))

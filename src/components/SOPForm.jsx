@@ -1,16 +1,16 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, Loader2, ArrowLeft } from "lucide-react";
+import { X, Send, Loader2, Earth } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "../supabase/supabaseClient"; // Import Supabase client
+import { logError } from "../utils/logger"; // Import logger if needed
 
 const formFields = [
   { name: "name", label: "Full Name", type: "text", placeholder: "Enter your full name" },
   { name: "email", label: "Email", type: "email", placeholder: "Enter your email address" },
-  { name: "phone", label: "Phone", type: "tel", placeholder: "Enter your phone number" },
-  { name: "course", label: "Desired Course", type: "text", placeholder: "Enter your desired course" },
-  { name: "university", label: "Target University", type: "text", placeholder: "Enter your target university" },
 ];
 
 const FormField = ({ label, type, value, onChange, name, placeholder, error }) => (
@@ -47,14 +47,11 @@ const FormField = ({ label, type, value, onChange, name, placeholder, error }) =
 
 function SOPForm({ isOpen, onClose }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
-    course: "",
-    university: "",
-    requirements: "",
+    message: "",
+    country: "", // Added country field
   });
   const [errors, setErrors] = useState({});
   const [isClosing, setIsClosing] = useState(false);
@@ -64,33 +61,22 @@ function SOPForm({ isOpen, onClose }) {
       setFormData({
         name: "",
         email: "",
-        phone: "",
-        course: "",
-        university: "",
-        requirements: "",
+        message: "",
+        country: "",
       });
-      setCurrentStep(1);
       setErrors({});
       setIsClosing(false);
     }
   }, [isOpen]);
 
-  const validateStep1 = () => {
+  const validateForm = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.email.trim()) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Invalid email format";
-    if (!formData.phone.trim()) newErrors.phone = "Phone is required";
-    if (!formData.course.trim()) newErrors.course = "Course is required";
-    if (!formData.university.trim()) newErrors.university = "University is required";
+    if (!formData.country) newErrors.country = "Please select a destination country"; // Validate country
+    if (!formData.message.trim()) newErrors.message = "Message is required"; // Validate message
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const validateStep2 = () => {
-    const newErrors = {};
-    if (!formData.requirements.trim()) newErrors.requirements = "Please provide your requirements";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -103,15 +89,35 @@ function SOPForm({ isOpen, onClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validateStep2()) return;
+    if (!validateForm()) return;
 
     setIsSubmitting(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const contactData = {
+        ...formData,
+        created_at: new Date().toISOString(),
+      };
+
+      // Insert data into Supabase
+      const { error } = await supabase.from("contacts").insert([contactData]);
+
+      if (error) throw error;
+
       toast.success("Form submitted successfully!");
       handleClose();
     } catch (error) {
-      toast.error("Failed to submit form. Please try again.");
+      logError(error, { formData });
+      console.error("Detailed error:", error);
+
+      if (error.message.includes("Failed to fetch")) {
+        toast.error("Network error. Please check your internet connection and try again.");
+      } else if (error.code === "23505") {
+        toast.error("This email has already been submitted. Please use a different email address.");
+      } else if (error.code === "42P01") {
+        toast.error("Database configuration error. Please contact support.");
+      } else {
+        toast.error("An error occurred while submitting your message. Please try again later.");
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -123,15 +129,6 @@ function SOPForm({ isOpen, onClose }) {
       onClose();
       setIsClosing(false);
     }, 300);
-  };
-
-  const nextStep = () => {
-    if (validateStep1()) setCurrentStep(2);
-  };
-
-  const prevStep = () => {
-    setCurrentStep(1);
-    setErrors({});
   };
 
   const modalVariants = {
@@ -167,94 +164,104 @@ function SOPForm({ isOpen, onClose }) {
 
             <div className="p-6 pb-0">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Start Your SOP Journey</h3>
-              <p className="text-gray-600">
-                {currentStep === 1
-                  ? "Fill in your basic details to get started"
-                  : "Tell us more about your requirements"}
-              </p>
-            </div>
-
-            <div className="w-full h-1 bg-gray-100 mt-6">
-              <motion.div
-                className="h-full bg-orange-500"
-                initial={{ width: "50%" }}
-                animate={{ width: currentStep === 1 ? "50%" : "100%" }}
-                transition={{ duration: 0.3 }}
-              />
+              <p className="text-gray-600">Fill in your details to get started</p>
             </div>
 
             <form onSubmit={handleSubmit} className="p-6 space-y-4">
-              <AnimatePresence mode="wait">
-                {currentStep === 1 ? (
-                  <motion.div
-                    key="step1"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
-                    className="space-y-4"
-                  >
-                    {formFields.map((field) => (
-                      <FormField
-                        key={field.name}
-                        {...field}
-                        value={formData[field.name]}
-                        onChange={handleChange}
-                        error={errors[field.name]}
-                      />
-                    ))}
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="step2"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    className="space-y-4"
-                  >
-                    <FormField
-                      label="Special Requirements"
-                      type="textarea"
-                      name="requirements"
-                      value={formData.requirements}
+              <div className="space-y-4">
+                {formFields.map((field) => (
+                  <FormField
+                    key={field.name}
+                    {...field}
+                    value={formData[field.name]}
+                    onChange={handleChange}
+                    error={errors[field.name]}
+                  />
+                ))}
+                {/* Destination Country Dropdown */}
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-gray-700">Destination Country</label>
+                  <div className="relative">
+                    <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                      <Earth size={16} />
+                    </div>
+                    <select
+                      name="country"
+                      value={formData.country}
                       onChange={handleChange}
-                      placeholder="Tell us about your specific requirements and preferences"
-                      error={errors.requirements}
-                    />
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                      className={`w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all ${
+                        errors.country ? "border-red-500" : "border-gray-200"
+                      }`}
+                      style={{ color: "#000" }} // Ensure text color is black
+                    >
+                      <option value="">Select a country</option>
+                      <option value="USA">United States of America</option>
+                      <option value="AUS">Australia</option>
+                      <option value="CAN">Canada</option>
+                      <option value="GBR">United Kingdom</option>
+                      <option value="NZL">New Zealand</option>
+                      <option value="SGP">Singapore</option>
+                      <option value="ARE">Dubai</option>
+                      <option value="IRL">Ireland</option>
+                      <option value="DEU">Germany</option>
+                      <option value="FRA">France</option>
+                      <option value="SWE">Sweden</option>
+                      <option value="NLD">Netherlands</option>
+                      <option value="AUT">Austria</option>
+                      <option value="DNK">Denmark</option>
+                      <option value="FIN">Finland</option>
+                      <option value="ITA">Italy</option>
+                      <option value="HUN">Hungary</option>
+                      <option value="CHE">Switzerland</option>
+                      <option value="ESP">Spain</option>
+                      <option value="LTU">Lithuania</option>
+                      <option value="CYP">Cyprus</option>
+                      <option value="POL">Poland</option>
+                      <option value="MYS">Malaysia</option>
+                      <option value="MUS">Mauritius</option>
+                      <option value="CHN">China</option>
+                      <option value="VNM">Vietnam</option>
+                      <option value="MLT">Malta</option>
+                      <option value="JPN">Japan</option>
+                      <option value="BEL">Belgium</option>
+                      <option value="RUS">Russia</option>
+                      <option value="KOR">South Korea</option>
+                      <option value="IND">India</option>
+                      <option value="GEO">Georgia</option>
+                      <option value="MCO">Monaco</option>
+                      <option value="HRV">Croatia</option>
+                    </select>
+                  </div>
+                  {errors.country && <p className="text-xs text-red-500">{errors.country}</p>}
+                </div>
 
-              <div className="flex gap-3 pt-4">
-                {currentStep === 2 && (
-                  <motion.button
-                    type="button"
-                    onClick={prevStep}
-                    className="flex-1 px-4 py-2 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <ArrowLeft className="w-4 h-4" />
-                    Back
-                  </motion.button>
-                )}
-                <motion.button
-                  type="button"
-                  onClick={currentStep === 1 ? nextStep : handleSubmit}
-                  className="flex-1 bg-orange-500 text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                  ) : (
-                    <>
-                      {currentStep === 1 ? "Next" : "Submit"}
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </motion.button>
+                <FormField
+                  label="Message"
+                  type="textarea"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="What would you like to tell us?"
+                  error={errors.message}
+                />
               </div>
+
+              <motion.button
+                type="submit"
+                className="w-full bg-orange-500 text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                ) : (
+                  <>
+                    Submit
+                    <Send className="w-4 h-4" />
+                  </>
+                )}
+              </motion.button>
             </form>
           </motion.div>
         </motion.div>

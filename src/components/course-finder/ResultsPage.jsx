@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from "framer-motion"
 import universitiesData from '../../data/university.json';
+import UniverityForm from "./UniversityForm"
 
 export default function ResultsPage({ selectedFilters }) {
   const [filteredUniversities, setFilteredUniversities] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   useEffect(() => {
     // Filter universities based on selected criteria
@@ -35,6 +38,14 @@ export default function ResultsPage({ selectedFilters }) {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
       </div>
     );
+  }
+
+  const openPopup = () => {
+    setIsPopupOpen(true)
+  }
+
+  const closePopup = () => {
+    setIsVisible(false)
   }
 
   return (
@@ -98,9 +109,12 @@ export default function ResultsPage({ selectedFilters }) {
                 </div>
 
                 {/* Apply Button */}
-                <button className="mt-6 w-full bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors">
+                <motion.button
+                 className="mt-6 w-full bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors" 
+                 onClick={openPopup}
+                 >
                   Apply Now
-                </button>
+                </motion.button>
               </div>
             </div>
           ))}
@@ -112,6 +126,7 @@ export default function ResultsPage({ selectedFilters }) {
             <p className="text-gray-600">Try adjusting your filters to see more results</p>
           </div>
         )}
+      <UniverityForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}/>
       </div>
     </div>
   );

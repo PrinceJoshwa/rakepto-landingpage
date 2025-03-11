@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from "react"
@@ -108,7 +107,7 @@ const SuccessAnimation = ({ message }) => (
   </motion.div>
 )
 
-function FormPopup({ isOpen, onClose }) {
+function LoanForm({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -215,7 +214,7 @@ function FormPopup({ isOpen, onClose }) {
             <button onClick={onClose} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
               <X size={20} /> {/* Medium close icon */}
             </button>
-            <h3 className="text-xl font-bold text-blue-900 mb-5 text-center">Contact Us</h3> {/* Medium heading */}
+            <h3 className="text-xl font-bold text-blue-900 mb-5 text-center">EduLoan Support</h3> {/* Medium heading */}
             <form onSubmit={handleSubmit} className="space-y-5"> {/* Medium spacing between form elements */}
               <AnimatedInput
                 label="Name"
@@ -340,7 +339,7 @@ function FormPopup({ isOpen, onClose }) {
                 whileTap={{ scale: 0.98 }}
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Submitting..." : "Submit"}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>
 
               {/* Error message */}
@@ -368,4 +367,4 @@ function FormPopup({ isOpen, onClose }) {
   )
 }
 
-export default FormPopup
+export default LoanForm

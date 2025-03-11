@@ -29,7 +29,7 @@ function Footer() {
             <Phone className="w-12 h-12 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Call Us</h3>
             <a href="tel:+91 81475 64448" className="hover:underline">+91 81475 64448</a>
-            <a href="mailto:example@gmail.com" className="hover:underline">example@gmail.com</a>
+            <a href="mailto:connect@rakepto.com" className="hover:underline">connect@rakepto.com</a>
 
           </motion.div>
           <motion.div 
@@ -51,7 +51,7 @@ function Footer() {
             <Calendar className="w-12 h-12 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Book a Session</h3>
             <motion.a 
-              href="#" 
+              href="https://calendly.com/rakshithvenkat248/30min" 
               className="bg-white text-black px-6 py-2 rounded-full text-lg font-semibold hover:bg-blue-100 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -69,7 +69,7 @@ function Footer() {
             <FontAwesomeIcon icon={faWhatsapp} size="2xl" className="w-12 h-12 mb-4"/>
             <h3 className="text-xl font-semibold mb-2">WhatsApp</h3>
             <motion.a 
-              href="https://wa.me/911234567890"
+              href="https://wa.me/918147564448"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors"

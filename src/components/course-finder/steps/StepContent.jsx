@@ -15,15 +15,15 @@ export default function StepContent({ step, formData, setFormData, onNext }) {
 
       case 'destination':
         return (
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3">
             {countries.map((country) => (
               <button
                 key={country.name}
                 type="button"
-                className={`p-4 rounded-lg border ${
+                className={`p-4 rounded-lg border bg-blue-50 ${
                   formData.country === country.name
                     ? 'border-orange-600 bg-orange-50'
-                    : 'border-gray-200'
+                    : 'border-blue-200 bg-blue-50'
                 }`}
                 onClick={() => {
                   setFormData(prev => ({ ...prev, country: country.name }))
@@ -50,7 +50,7 @@ export default function StepContent({ step, formData, setFormData, onNext }) {
                 className={`p-4 rounded-lg border ${
                   formData.degree === degree
                     ? 'border-orange-600 bg-orange-50'
-                    : 'border-gray-200'
+                    : 'border-blue-200 bg-blue-50'
                 }`}
                 onClick={() => {
                   setFormData(prev => ({ ...prev, degree }))
@@ -76,7 +76,7 @@ export default function StepContent({ step, formData, setFormData, onNext }) {
                 className={`p-4 rounded-lg border ${
                   formData.studyArea === area.name
                     ? 'border-orange-600 bg-orange-50'
-                    : 'border-gray-200'
+                    : 'border-blue-200 bg-blue-50'
                 }`}
                 onClick={() => {
                   setFormData(prev => ({ ...prev, studyArea: area.name }))

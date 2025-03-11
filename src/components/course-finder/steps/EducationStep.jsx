@@ -14,7 +14,7 @@ export default function EducationStep({ formData, setFormData }) {
             className={`p-4 rounded-lg border ${
               formData.education === education
                 ? 'border-orange-600 bg-orange-50'
-                : 'border-gray-200'
+                : 'border-blue-200 bg-blue-50'
             }`}
             onClick={() => setFormData(prev => ({ ...prev, education }))}
           >
@@ -56,7 +56,7 @@ export default function EducationStep({ formData, setFormData }) {
               className={`p-4 rounded-lg border ${
                 formData.hasBacklogs === option
                   ? 'border-orange-600 bg-orange-50'
-                  : 'border-gray-200'
+                  : 'border-blue-200 bg-blue-50'
               }`}
               onClick={() => setFormData(prev => ({ ...prev, hasBacklogs: option }))}
             >

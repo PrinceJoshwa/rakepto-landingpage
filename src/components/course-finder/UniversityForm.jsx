@@ -4,8 +4,8 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, CheckCircle, Sparkles, User, Mail, MessageSquare, Earth } from "lucide-react"
-import { supabase } from "../supabase/supabaseClient"
-import { logError } from "../utils/logger"
+import { supabase } from "../../supabase/supabaseClient"
+import { logError } from "../../utils/logger"
 
 // Animated input wrapper component (medium size)
 const AnimatedInput = ({ label, icon: Icon, error, ...props }) => {
@@ -108,7 +108,7 @@ const SuccessAnimation = ({ message }) => (
   </motion.div>
 )
 
-function FormPopup({ isOpen, onClose }) {
+function UniversityForm({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -215,7 +215,7 @@ function FormPopup({ isOpen, onClose }) {
             <button onClick={onClose} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
               <X size={20} /> {/* Medium close icon */}
             </button>
-            <h3 className="text-xl font-bold text-blue-900 mb-5 text-center">Contact Us</h3> {/* Medium heading */}
+            <h3 className="text-2xl font-bold text-orange-500 mb-5 text-center">Start Your Journey!</h3> {/* Medium heading */}
             <form onSubmit={handleSubmit} className="space-y-5"> {/* Medium spacing between form elements */}
               <AnimatedInput
                 label="Name"
@@ -335,7 +335,7 @@ function FormPopup({ isOpen, onClose }) {
 
               <motion.button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm" // Medium button
+                className="w-full bg-orange-500 text-white py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm" // Medium button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={isSubmitting}
@@ -368,4 +368,4 @@ function FormPopup({ isOpen, onClose }) {
   )
 }
 
-export default FormPopup
+export default UniversityForm

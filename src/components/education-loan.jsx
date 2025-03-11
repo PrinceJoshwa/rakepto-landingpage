@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState, useEffect } from "react"
@@ -5,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { Check, Globe2, GraduationCap, Users2, Building2, BookOpen, Wallet, CircleDollarSign } from "lucide-react"
 import { Link } from "react-router-dom"
 import { useRef } from "react"
+import LoanForm from "./LoanForm"
 
 const FloatingCard = ({ children, delay = 0 }) => {
   return (
@@ -22,6 +24,7 @@ const FloatingCard = ({ children, delay = 0 }) => {
 }
 
 export default function EducationLoan() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -39,6 +42,10 @@ export default function EducationLoan() {
 
     return () => clearTimeout(timer)
   }, [])
+
+  const openPopup = () => {
+    setIsPopupOpen(true)
+  }
 
   // Loading screen
   if (isLoading) {
@@ -91,26 +98,28 @@ export default function EducationLoan() {
                 Unlock your global education potential with our tailored loan solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="#apply"
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   className="group relative inline-flex items-center justify-center px-8 py-3 font-bold text-white transition-all duration-200 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full hover:from-orange-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                  onClick={openPopup}
                 >
-                  <span>Apply Now</span>
-                  <motion.span
-                    className="absolute right-0 -mt-12 h-32 w-8 opacity-40"
-                    animate={{
-                      x: ["0%", "200%"],
-                    }}
-                    transition={{
-                      repeat: Number.POSITIVE_INFINITY,
-                      duration: 1.5,
-                      ease: "linear",
-                    }}
-                    style={{
-                      background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)",
-                    }}
-                  />
-                </Link>
+                  Apply Now!
+                </motion.button>
+                <motion.span
+                  className="absolute right-0 -mt-12 h-32 w-8 opacity-40"
+                  animate={{
+                    x: ["0%", "200%"],
+                  }}
+                  transition={{
+                    repeat: Number.POSITIVE_INFINITY,
+                    duration: 1.5,
+                    ease: "linear",
+                  }}
+                  style={{
+                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)",
+                  }}
+                />
                 <Link
                   to="#learn-more"
                   className="inline-flex items-center justify-center px-8 py-3 font-bold text-white border-2 border-white/50 rounded-full hover:bg-white/10 transition-all duration-200"
@@ -199,6 +208,7 @@ export default function EducationLoan() {
               </FloatingCard>
             ))}
           </div>
+          <LoanForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
         </div>
       </section>
 
@@ -336,14 +346,36 @@ export default function EducationLoan() {
                 Take the first step towards your international education dreams
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                {/* <Link
                   to="#apply"
                   className="inline-flex items-center justify-center px-8 py-4 font-bold text-orange-500 bg-white rounded-full hover:bg-blue-50 transition-all duration-200"
                 >
                   Apply Now
-                </Link>
+                </Link> */}
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center justify-center px-8 py-4 font-bold text-orange-500 bg-white rounded-full hover:bg-blue-50 transition-all duration-200"
+                  onClick={openPopup}
+                >
+                  Apply Now!
+                </motion.button>
+                <motion.span
+                  className="absolute right-0 -mt-12 h-32 w-8 opacity-40"
+                  animate={{
+                    x: ["0%", "200%"],
+                  }}
+                  transition={{
+                    repeat: Number.POSITIVE_INFINITY,
+                    duration: 1.5,
+                    ease: "linear",
+                  }}
+                  style={{
+                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)",
+                  }}
+                />
                 <Link
-                  to="#contact"
+                  to="/#contact"
                   className="inline-flex items-center justify-center px-8 py-4 font-bold text-white border-2 border-white rounded-full hover:bg-white/10 transition-all duration-200"
                 >
                   Contact Us
@@ -356,4 +388,3 @@ export default function EducationLoan() {
     </div>
   )
 }
-

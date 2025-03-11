@@ -13,7 +13,7 @@ export default function ExperienceStep({ formData, setFormData }) {
             className={`p-4 rounded-lg border ${
               formData.hasWorkExperience === option
                 ? 'border-orange-600 bg-orange-50'
-                : 'border-gray-200'
+                : 'border-blue-200 bg-blue-50'
             }`}
             onClick={() => setFormData(prev => ({ ...prev, hasWorkExperience: option }))}
           >

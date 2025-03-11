@@ -45,7 +45,7 @@ function SOP() {
   }
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
+    <section id="sop" className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">

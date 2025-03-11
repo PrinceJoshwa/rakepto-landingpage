@@ -1,9 +1,10 @@
 //v0
+
 "use client"
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { FileText, BookOpen, DollarSign, Plane, Home, Briefcase } from "lucide-react"
+import { FileText, BookOpen, DollarSign, Plane, Home, Briefcase, Medal, GraduationCap } from "lucide-react"
 import FormPopup from "./FormPopup"
 
 const supportItems = [
@@ -21,6 +22,10 @@ const supportItems = [
   { icon: Plane, title: "Visa Support", description: "Expert help with visa application and documentation" },
   { icon: Home, title: "Accommodation", description: "Find the perfect place to stay during your studies" },
   { icon: Briefcase, title: "Part-time Job", description: "Guidance on finding part-time work opportunities" },
+  { icon: BookOpen, title: "Test Preparation", description: "Resources and coaching to excel in entrance exams" },  
+  { icon: Medal, title: "Scholarship", description: "Assistance in finding and applying for scholarships" },  
+  { icon: GraduationCap, title: "Academic Support", description: "Guidance to help you succeed in your studies" },
+
 ]
 
 const containerVariants = {
@@ -99,7 +104,7 @@ function EndToEndSupport() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openPopup(item.title)}
                 >
-                  Learn More
+                  Regiter Now!
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

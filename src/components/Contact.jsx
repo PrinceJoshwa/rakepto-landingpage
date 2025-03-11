@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState, useEffect } from "react"
@@ -11,6 +10,7 @@ import {
   XCircle,
   Wifi,
   WifiOff,
+  Earth,
   Mail,
   User,
   MessageSquare,
@@ -166,6 +166,7 @@ function Contact() {
     name: "",
     email: "",
     message: "",
+    country: "",
   })
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -197,6 +198,10 @@ function Contact() {
       newErrors.email = "Email is required"
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address"
+    }
+
+    if (!formData.country) {
+      newErrors.country = "Please select a destination country"
     }
 
     if (!formData.message.trim()) {
@@ -261,9 +266,9 @@ function Contact() {
   }
 
   return (
-    <section className="min-h-screen py-8 relative overflow-hidden bg-gradient-to-b ">
+    <section className="min-h-screen py-8 relative overflow-hidden bg-blue-50 ">
       {/* Animated background text */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none ">
         <RunningText text="CONTACT US MESSAGE CONNECT REACH OUT" speed={30} direction={1} />
         <RunningText text="GET IN TOUCH SUPPORT HELP FEEDBACK" speed={25} direction={-1} />
         <RunningText text="QUESTIONS INQUIRIES INFORMATION REQUEST" speed={20} direction={1} />
@@ -352,6 +357,85 @@ function Contact() {
                 placeholder="Enter your email"
               />
 
+              {/* Add the country dropdown here */}
+              <motion.div
+                className="relative mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <label className="block text-gray-700 font-semibold mb-2">Destination Country</label>
+                <motion.div
+                  className={`relative group ${errors.country ? "animate-shake" : ""}`}
+                  whileTap={{ scale: 0.995 }}
+                >
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors">
+                    <Earth size={18} />
+                  </div>
+                  <select
+                    id="country"
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    className={`w-full pl-12 pr-4 py-3 bg-white/70 backdrop-blur-sm border-2 rounded-xl focus:outline-none transition-all
+                      ${
+                        errors.country
+                          ? "border-red-300 focus:border-red-500 focus:ring-red-200"
+                          : "border-gray-200 focus:border-blue-500 focus:ring-blue-200"
+                      } focus:ring-4`}
+                  >
+                    <option value="">Select a country</option>
+                    <option value="USA">United States of America</option>
+                    <option value="AUS">Australia</option>
+                    <option value="CAN">Canada</option>
+                    <option value="GBR">United Kingdom</option>
+                    <option value="NZL">New Zealand</option>
+                    <option value="SGP">Singapore</option>
+                    <option value="ARE">Dubai</option>
+                    <option value="IRL">Ireland</option>
+                    <option value="DEU">Germany</option>
+                    <option value="FRA">France</option>
+                    <option value="SWE">Sweden</option>
+                    <option value="NLD">Netherlands</option>
+                    <option value="AUT">Austria</option>
+                    <option value="DNK">Denmark</option>
+                    <option value="FIN">Finland</option>
+                    <option value="ITA">Italy</option>
+                    <option value="HUN">Hungary</option>
+                    <option value="CHE">Switzerland</option>
+                    <option value="ESP">Spain</option>
+                    <option value="LTU">Lithuania</option>
+                    <option value="CYP">Cyprus</option>
+                    <option value="POL">Poland</option>
+                    <option value="MYS">Malaysia</option>
+                    <option value="MUS">Mauritius</option>
+                    <option value="CHN">China</option>
+                    <option value="VNM">Vietnam</option>
+                    <option value="MLT">Malta</option>
+                    <option value="JPN">Japan</option>
+                    <option value="BEL">Belgium</option>
+                    <option value="RUS">Russia</option>
+                    <option value="KOR">South Korea</option>
+                    <option value="IND">India</option>
+                    <option value="GEO">Georgia</option>
+                    <option value="MCO">Monaco</option>
+                    <option value="HRV">Croatia</option>
+                  </select>
+                  <AnimatePresence>
+                    {errors.country && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="text-red-500 text-sm mt-1 ml-1"
+                      >
+                        {errors.country}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              </motion.div>
+
               <AnimatedInput
                 label="Message"
                 type="textarea"
@@ -374,9 +458,7 @@ function Contact() {
                 <motion.button
                   type="submit"
                   className={`w-full px-6 py-4 rounded-xl font-semibold text-white transition-all flex items-center justify-center gap-2 ${
-                    isOnline
-                      ? "bg-blue-800"
-                      : "bg-gray-400 cursor-not-allowed"
+                    isOnline ? "bg-blue-800" : "bg-gray-400 cursor-not-allowed"
                   }`}
                   whileHover={isOnline ? { scale: 1.02 } : {}}
                   whileTap={isOnline ? { scale: 0.98 } : {}}
@@ -441,19 +523,19 @@ function Contact() {
               {
                 icon: Mail,
                 title: "Email",
-                description: "support@example.com",
+                description: "connect@rakepto.com",
                 delay: 0,
               },
               {
                 icon: MessageSquare,
                 title: "Live Chat",
-                description: "Available 24/7",
+                description: "Available 11am-8pm",
                 delay: 0.1,
               },
               {
                 icon: User,
                 title: "Support",
-                description: "Mon-Fri, 9am-6pm",
+                description: "Mon-Fri, 11am-8pm",
                 delay: 0.2,
               },
             ].map((item, index) => (
@@ -498,3 +580,4 @@ style.textContent = `
 document.head.appendChild(style)
 
 export default Contact
+

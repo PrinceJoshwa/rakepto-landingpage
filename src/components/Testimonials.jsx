@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Star, ArrowRight } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const testimonials = [
   {
@@ -35,6 +36,7 @@ const itemVariants = {
   }
 }
 
+
 function RatingCard({ platform, rating }) {
   return (
     <motion.div 
@@ -56,8 +58,14 @@ function RatingCard({ platform, rating }) {
 }
 
 function Testimonials() {
+  const navigate = useNavigate()
+
+  const handleButtonClick = () => {
+    navigate("/course-finder")
+  }
+  
   return (
-    <section className="py-8 bg-blue-50/50">
+    <section className="py-8 bg-white">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center mb-12 text-black"
@@ -82,10 +90,12 @@ function Testimonials() {
               <p className="text-xl text-blue-900 font-medium mb-4">
                 trusted by over 10 lakh students globally
               </p>
-              <button className="bg-blue-700 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-blue-800 transition-colors mx-auto lg:mx-0">
+              <motion.button className="bg-blue-700 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-blue-800 transition-colors mx-auto lg:mx-0"
+               onClick={handleButtonClick}
+              >
                 Get started
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </motion.button>
             </div>
           </div>
         </motion.div>
@@ -100,7 +110,7 @@ function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <motion.div 
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
               variants={itemVariants}
               whileHover={{ scale: 1.03 }}
             >
