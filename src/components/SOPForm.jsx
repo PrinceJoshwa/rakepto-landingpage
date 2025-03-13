@@ -99,7 +99,7 @@ function SOPForm({ isOpen, onClose }) {
       };
 
       // Insert data into Supabase
-      const { error } = await supabase.from("contacts").insert([contactData]);
+      const { error } = await supabase.from("contact").insert([contactData]);
 
       if (error) throw error;
 

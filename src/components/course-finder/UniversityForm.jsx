@@ -168,7 +168,7 @@ function UniversityForm({ isOpen, onClose }) {
         created_at: new Date().toISOString(),
       }
 
-      const { error } = await supabase.from("contacts").insert([contactData])
+      const { error } = await supabase.from("contact").insert([contactData])
 
       if (error) throw error
 
