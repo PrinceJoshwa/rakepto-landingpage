@@ -98,20 +98,31 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:flex-row md:space-x-6">
-            <Link
-              to={isStandalonePage ? "/#hero" : "#hero"}
-              className={`hover:text-orange-500 transition-colors text-lg ${
-                isActive("/") ? "text-orange-500" : ""
-              }`}
-              onClick={(e) => {
-                if (!isStandalonePage) {
-                  e.preventDefault()
-                  handleNavigation("#hero")
-                }
-              }}
-            >
-              Home
-            </Link>
+     <Link
+  to="/"
+  className={`hover:text-orange-500 transition-colors text-lg ${
+    isActive("/") ? "text-orange-500" : ""
+  }`}
+  onClick={(e) => {
+    e.preventDefault();
+
+    // If you're already on `/`, manually remove query param and scroll
+    if (location.pathname === "/") {
+      const element = document.getElementById("hero");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.replaceState({}, "", "/"); // Clear scrollTo param
+      }
+    } else {
+      // If you're on another route, navigate with scrollTo
+      window.location.href = "/?scrollTo=hero";
+    }
+  }}
+>
+  Home
+</Link>
+
+
 
             {/* Student Service Dropdown */}
             <div
@@ -177,19 +188,36 @@ function Header() {
             >
               Course Finder
             </Link>
-            <Link
-              to={isStandalonePage ? "/#contact" : "#contact"}
+    <Link
+  to="/?scrollTo=contact"
+  className={`hover:text-orange-500 transition-colors text-lg ${
+    isActive("/#contact") ? "text-orange-500" : ""
+  }`}
+  onClick={(e) => {
+    setMenuOpen(false);
+
+    if (location.pathname === "/") {
+      e.preventDefault(); // prevent navigation
+      const target = document.getElementById("contact");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+        window.history.replaceState({}, "", "/"); // clean the URL
+      }
+    }
+  }}
+>
+  Contact
+</Link>
+
+
+             <Link
+              to={"/blogs"}
               className={`hover:text-orange-500 transition-colors text-lg ${
-                isActive("/#contact") ? "text-orange-500" : ""
+                isActive("/blogs") ? "text-orange-500" : ""
               }`}
-              onClick={(e) => {
-                if (!isStandalonePage) {
-                  e.preventDefault()
-                  handleNavigation("#contact")
-                }
-              }}
+            
             >
-              Contact
+              Blogs
             </Link>
           </nav>
         </div>
@@ -211,21 +239,31 @@ function Header() {
                   <img src="https://res.cloudinary.com/dsj3kcbf4/image/upload/v1741374542/Marketly_logo_1000_x_300_px__20250307_140834_0000_phrgpp.png" alt="Rakepto Logo" className="h-10 w-auto" />
                 </Link>
               </motion.div>
-              <Link
-                to={isStandalonePage ? "/#hero" : "#hero"}
-                className={`text-white text-xl py-4 hover:text-orange-500 transition-colors text-lg ${
-                  isActive("/") ? "text-orange-500 font-semibold" : ""
-                }`}
-                onClick={(e) => {
-                  if (!isStandalonePage) {
-                    e.preventDefault()
-                    handleNavigation("#hero")
-                  }
-                  setMenuOpen(false)
-                }}
-              >
-                Home
-              </Link>
+ <Link
+  to="/"
+  className={`hover:text-orange-500 transition-colors text-lg ${
+    isActive("/") ? "text-orange-500" : ""
+  }`}
+  onClick={(e) => {
+    e.preventDefault();
+
+    // If you're already on `/`, manually remove query param and scroll
+    if (location.pathname === "/") {
+      const element = document.getElementById("hero");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.replaceState({}, "", "/"); // Clear scrollTo param
+      }
+    } else {
+      // If you're on another route, navigate with scrollTo
+      window.location.href = "/?scrollTo=hero";
+    }
+  }}
+>
+  Home
+</Link>
+
+
 
               {/* Student Service Dropdown in Mobile */}
               <div
@@ -297,21 +335,36 @@ function Header() {
               >
                 Course Finder
               </Link>
-              <Link
-                to={isStandalonePage ? "/#contact" : "#contact"}
-                className={`text-white text-xl py-4 hover:text-orange-500 transition-colors text-lg ${
-                  isActive("/contact") ? "text-orange-500 font-semibold" : ""
-                }`}
-                onClick={(e) => {
-                  if (!isStandalonePage) {
-                    e.preventDefault()
-                    handleNavigation("#contact")
-                  }
-                  setMenuOpen(false)
-                }}
-              >
-                Contact
-              </Link>
+      <Link
+  to="/?scrollTo=contact"
+  className={`hover:text-orange-500 transition-colors text-lg ${
+    isActive("/#contact") ? "text-orange-500" : ""
+  }`}
+  onClick={(e) => {
+    setMenuOpen(false);
+
+    if (location.pathname === "/") {
+      e.preventDefault(); // prevent navigation
+      const target = document.getElementById("contact");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+        window.history.replaceState({}, "", "/"); // clean the URL
+      }
+    }
+  }}
+>
+  Contact
+</Link>
+
+                 <Link
+              to={"/blogs"}
+              className={`text-white text-xl py-4 hover:text-orange-500 transition-colors text-lg ${
+                isActive("/blogs") ? "text-orange-500" : ""
+              }`}
+            
+            >
+              Blogs
+            </Link>
             </nav>
           </motion.div>
         )}

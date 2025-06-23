@@ -25,6 +25,8 @@ import TestPreparation from "./components/TestPreparation"
 import PickDestination from "./components/PickDestination"; // Import the PickDestination component
 import { Toaster } from "sonner"
 import Scholarship from "./components/Scholarship"
+import Blogs from "./pages/Blogs"
+import BlogPost from "./pages/Blog"
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -45,6 +47,21 @@ function ScrollToTop() {
 }
 
 function MainContent() {
+    const location = useLocation()
+
+useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const scrollTo = params.get("scrollTo");
+
+  if (scrollTo) {
+    const target = document.getElementById(scrollTo);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+      window.history.replaceState({}, "", location.pathname); // clean URL
+    }
+  }
+}, [location.search]);
+
   return (
     <>
       <Hero />
@@ -83,6 +100,8 @@ function App() {
             <Route path="/education-loan" element={<EducationLoan />} />            
             <Route path="/test-preparation" element={<TestPreparation />} />
             <Route path="/scholarship" element={<Scholarship />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:slug" element={<BlogPost />} />
           </Routes>
           <Footer />
         </motion.div>
