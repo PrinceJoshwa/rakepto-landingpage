@@ -23,6 +23,7 @@ import FreeFlightPopup from "./components/FreeFlightPopup"
 import EducationLoan from "./components/education-loan"
 import TestPreparation from "./components/TestPreparation"
 import PickDestination from "./components/PickDestination"; // Import the PickDestination component
+import Partner from "./components/Partner"
 import { Toaster } from "sonner"
 import Scholarship from "./components/Scholarship"
 import Blogs from "./pages/Blogs"
@@ -74,6 +75,7 @@ useEffect(() => {
       {/* <SteppingAbroad /> */}
       <ApplicationProcess />
       <Testimonials />
+      {/* <Partner /> */}
       <Contact />
       <WhatsAppChat />
       <FreeFlightPopup />
@@ -100,6 +102,7 @@ function App() {
             <Route path="/education-loan" element={<EducationLoan />} />            
             <Route path="/test-preparation" element={<TestPreparation />} />
             <Route path="/scholarship" element={<Scholarship />} />
+            <Route path="/partner" element={<Partner />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogs/:slug" element={<BlogPost />} />
           </Routes>

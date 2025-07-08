@@ -198,14 +198,15 @@ export default function TestPreparation() {
                         </ul>
                       </div>
                       <div className="p-6">
-                        <motion.button
+                        <motion.a
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           className="w-full bg-blue-600 text-white py-3 rounded-full font-medium flex items-center justify-center"
+                          href="https://pages.razorpay.com/pl_Q30LDuozfiDzcK/view"
                         >
                           Enroll Now
                           <ArrowRight className="w-5 h-5 ml-2" />
-                        </motion.button>
+                        </motion.a>
                       </div>
                     </motion.div>
                   ))
@@ -230,14 +231,15 @@ export default function TestPreparation() {
                             </li>
                           ))}
                         </ul>
-                        <motion.button
+                        <motion.a
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           className="w-full bg-blue-600 text-white py-3 rounded-full font-medium flex items-center justify-center"
+                          href="https://pages.razorpay.com/pl_Q30LDuozfiDzcK/view"
                         >
                           Enroll Now
                           <ArrowRight className="w-5 h-5 ml-2" />
-                        </motion.button>
+                        </motion.a>
                       </div>
                     </motion.div>
                   ))}

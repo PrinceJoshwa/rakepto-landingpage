@@ -39,7 +39,7 @@ function Header() {
     }
   }, [])
 
-  const isStandalonePage = ["/course-finder", "/test-preparation", "/education-loan", "/scholarship"].includes(
+  const isStandalonePage = ["/course-finder", "/test-preparation", "/education-loan", "/scholarship", "/partner"].includes(
     location.pathname,
   )
 
@@ -219,6 +219,15 @@ function Header() {
             >
               Blogs
             </Link>
+             <Link
+              to={"/partner"}
+              className={`hover:text-orange-500 transition-colors text-lg ${
+                isActive("/partner") ? "text-orange-500" : ""
+              }`}
+            
+            >
+              Become Our Partner
+            </Link>
           </nav>
         </div>
       </motion.header>
@@ -236,7 +245,7 @@ function Header() {
             <nav className="flex flex-col items-center justify-center h-[calc(100vh-80px)]">
               <motion.div className="flex items-center">
                 <Link to="/" onClick={() => setMenuOpen(false)}>
-                  <img src="https://res.cloudinary.com/dsj3kcbf4/image/upload/v1741374542/Marketly_logo_1000_x_300_px__20250307_140834_0000_phrgpp.png" alt="Rakepto Logo" className="h-10 w-auto" />
+                  {/* <img src="https://res.cloudinary.com/dsj3kcbf4/image/upload/v1741374542/Marketly_logo_1000_x_300_px__20250307_140834_0000_phrgpp.png" alt="Rakepto Logo" className="h-10 w-auto" /> */}
                 </Link>
               </motion.div>
  <Link
@@ -364,6 +373,15 @@ function Header() {
             
             >
               Blogs
+            </Link>
+                 <Link
+              to={"/partner"}
+              className={`text-white text-xl py-4 hover:text-orange-500 transition-colors text-lg ${
+                isActive("/Partner") ? "text-orange-500" : ""
+              }`}
+            
+            >
+              Become Our Partner
             </Link>
             </nav>
           </motion.div>
