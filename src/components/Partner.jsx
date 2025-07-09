@@ -74,7 +74,7 @@ const Partner = () => {
     {
       icon: Users,
       title: "Sign Up",
-      description: "Register on Edvoy's referral program and receive your unique referral code.",
+      description: "Register on Rakepto's referral program and receive your unique referral code.",
       color: "from-blue-500 to-blue-600",
       lightColor: "bg-blue-50",
     },
@@ -152,7 +152,7 @@ const Partner = () => {
           </motion.div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6">
-            Refer & Earn with <span className="text-orange-500">Edvoy</span>
+            Refer & Earn with <span className="text-orange-500">Rakepto</span>
           </h1>
 
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -162,7 +162,7 @@ const Partner = () => {
           </p>
 
           <motion.a
-            href="https://edvoy.com/referral/"
+            // href="https://edvoy.com/referral/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg"
@@ -259,7 +259,7 @@ const Partner = () => {
               Join our partnership program today and start earning rewards for every successful referral.
             </p>
             <motion.a
-              href="https://edvoy.com/referral/"
+            //   href="https://edvoy.com/referral/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg"
