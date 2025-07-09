@@ -161,7 +161,7 @@ const Partner = () => {
             <span className="text-blue-900 font-bold">(₹10,000 to ₹35,000)</span> for each successful referral.
           </p>
 
-          <motion.a
+          <motion.button
 {/*             href="https://edvoy.com/referral/" */}
             target="_blank"
             rel="noopener noreferrer"
@@ -171,7 +171,7 @@ const Partner = () => {
           >
             Sign Up to Refer
             <ArrowRight className="w-5 h-5" />
-          </motion.a>
+          </motion.button>
         </motion.div>
 
         {/* How It Works Section */}
@@ -258,7 +258,7 @@ const Partner = () => {
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
               Join our partnership program today and start earning rewards for every successful referral.
             </p>
-            <motion.a
+            <motion.button
 {/*               href="https://edvoy.com/referral/" */}
               target="_blank"
               rel="noopener noreferrer"
@@ -268,7 +268,7 @@ const Partner = () => {
             >
               Join Now
               <ArrowRight className="w-5 h-5" />
-            </motion.a>
+            </motion.button>
           </div>
         </motion.div>
       </div>
