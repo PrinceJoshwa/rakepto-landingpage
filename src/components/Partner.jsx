@@ -295,7 +295,7 @@ const Partner = () => {
     setMessage("")
 
     try {
-      const response = await fetch("https://rakepto.com/api/sendReferral", {
+      const response = await fetch("/api/sendReferral", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
