@@ -18,7 +18,7 @@ export default async (req, res) => {
   try {
     await resend.emails.send({
       // from: process.env.FROM_EMAIL, // e.g. noreply@yourdomain.com
-      from: 'onboarding@resend.dev', // e.g. noreply@yourdomain.com
+      from: 'Acme <onboarding@resend.dev>', // e.g. noreply@yourdomain.com onboarding@resend.dev
       to: email,
       subject: "Your Rakepto Referral Code",
       html: `<p>Hi ${name},</p><p>Your referral code is: <strong>${referralCode}</strong></p>`,
