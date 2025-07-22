@@ -1,8 +1,8 @@
 // api/sendReferral.js
 import { Resend } from "resend"
 
-// const resend = new Resend(process.env.RESEND_API_KEY)
-const resend = new Resend('re_GuUruAmb_AoCrh5czjBne')
+const resend = new Resend(process.env.RESEND_API_KEY)
+
 
 function generateReferralCode(length = 8) {
   return Math.random().toString(36).substring(2, 2 + length).toUpperCase()
