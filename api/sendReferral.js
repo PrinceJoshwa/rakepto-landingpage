@@ -34,7 +34,7 @@ export default async (req, res) => {
 
 try {
   const response = await resend.emails.send({
-    from: 'Acme <onboarding@resend.dev>',
+    from: 'connect@rakepto.com',
     to: email,
     subject: "Your Rakepto Referral Code",
     html: `<p>Hi ${name},</p><p>Your referral code is: <strong>${referralCode}</strong></p>`,
