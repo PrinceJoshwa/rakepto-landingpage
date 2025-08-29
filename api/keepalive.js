@@ -12,8 +12,8 @@ export default async function handler(req, res) {
   const { error } = await supabase.from("heartbeat").select("id").limit(1);
 
   if (error) {
-    return res.status(500).json({ ok: false, error: error.message });
+    return res.status(500).json({ ok: false, message: "❌ Keep-alive failed", error: error.message });
   }
 
-  return res.status(200).json({ ok: true, at: new Date().toISOString() });
+  return res.status(200).json({ ok: true, message: "✅ Keep-alive successful. Supabase connection is active.", at: new Date().toISOString() });
 }
