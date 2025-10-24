@@ -76,12 +76,12 @@ function SteppingAbroad() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           {/* <motion.a 
-            href="tel:+91 81475 64448" 
+            href="tel:+91 6364574448" 
             className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            CLAIM +91 81475 64448
+            CLAIM +91 6364574448
           </motion.a> */}
         </motion.div>
       </div>
