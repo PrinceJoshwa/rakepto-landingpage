@@ -12,7 +12,7 @@ config.autoAddCss = false
 
 function WhatsAppChat() {
   const [isOpen, setIsOpen] = useState(false)
-  const phoneNumber = '+918147564448' // Replace with your actual WhatsApp number
+  const phoneNumber = '+916364574448' // Replace with your actual WhatsApp number
   const message = encodeURIComponent('Hi, I\'m interested in studying abroad. Can you help me?')
 
   const toggleChat = () => setIsOpen(!isOpen)

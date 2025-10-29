@@ -69,8 +69,8 @@ function Footer() {
             <FontAwesomeIcon icon={faWhatsapp} size="2xl" className="w-12 h-12 mb-4"/>
             <h3 className="text-xl font-semibold mb-2">WhatsApp</h3>
             <motion.a 
-              // href="https://wa.me/918147564448"
-              href="https://api.whatsapp.com/send/?phone=%2B9163647574448&text=Hi%2C+I%27m+interested+in+studying+abroad.+Can+you+help+me%3F&type=phone_number&app_absent=0"
+              href="https://wa.me/916364574448"
+              // href="https://api.whatsapp.com/send/?phone=%2B9163647574448&text=Hi%2C+I%27m+interested+in+studying+abroad.+Can+you+help+me%3F&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors"
