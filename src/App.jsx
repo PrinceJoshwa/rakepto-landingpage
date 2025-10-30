@@ -28,6 +28,7 @@ import { Toaster } from "sonner"
 import Scholarship from "./components/Scholarship"
 import Blogs from "./pages/Blogs"
 import BlogPost from "./pages/Blog"
+import Thankyou from "./components/contact/Thankyou"
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -105,6 +106,10 @@ function App() {
             <Route path="/partner" element={<Partner />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogs/:slug" element={<BlogPost />} />
+            <Route path="/contact/thankyou" element={<Thankyou/>} />
+            <Route path="/freeflight/thankyou" element={<Thankyou/>} />
+            <Route path="/loan/thankyou" element={<Thankyou/>} />
+
           </Routes>
           <Footer />
         </motion.div>
