@@ -664,7 +664,7 @@ function Testimonials() {
             {/* This inner div is the track that animates (the "Magic UI Slider" effect) */}
             <motion.div
               className="flex gap-8 pr-8" // pr-8 matches gap-8 for a seamless loop
-              animate={{ x: "-50%" }}
+              animate={{ x: "-200%" }}
               transition={{ duration: 40, ease: "linear", repeat: Infinity }}
             >
               {doubledImageTestimonials.map((item, index) => (
