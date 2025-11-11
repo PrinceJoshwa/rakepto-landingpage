@@ -5,7 +5,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { FileText, BookOpen, DollarSign, Plane, Home, Briefcase, Medal, GraduationCap } from "lucide-react"
-import FormPopup from "./FormPopup"
+import FormPopup from "./EndToEndForm"
 
 const supportItems = [
   { icon: FileText, title: "SOP", description: "Expert guidance on crafting a standout Statement of Purpose" },

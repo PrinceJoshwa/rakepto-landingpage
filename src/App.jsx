@@ -109,6 +109,9 @@ function App() {
             <Route path="/contact/thankyou" element={<Thankyou/>} />
             <Route path="/freeflight/thankyou" element={<Thankyou/>} />
             <Route path="/loan/thankyou" element={<Thankyou/>} />
+            <Route path="/university/thankyou" element={<Thankyou/>} />
+            <Route path="/support/thankyou" element={<Thankyou/>} />
+            <Route path="/sop/thankyou" element={<Thankyou/>} />
 
           </Routes>
           <Footer />

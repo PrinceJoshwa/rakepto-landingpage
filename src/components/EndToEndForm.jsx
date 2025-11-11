@@ -1,0 +1,353 @@
+"use client"
+
+import { useState } from "react"
+import { useNavigate } from "react-router-dom" // 1. Import useNavigate
+import { motion, AnimatePresence } from "framer-motion"
+import { X, User, Mail, MessageSquare, Earth, XCircle } from "lucide-react" // 2. Removed CheckCircle & Sparkles
+// import { supabase } from "../supabase/supabaseClient" // <-- REMOVED
+import { logError } from "../utils/logger"
+
+// Animated input wrapper component (medium size)
+const AnimatedInput = ({ label, icon: Icon, error, ...props }) => {
+  const [isFocused, setIsFocused] = useState(false)
+
+  return (
+    <motion.div
+      className="relative mb-5" // Medium margin-bottom
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label> {/* Medium label */}
+      <motion.div className={`relative group ${error ? "animate-shake" : ""}`} whileTap={{ scale: 0.98 }}>
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors">
+          <Icon size={18} /> {/* Medium icon */}
+        </div>
+        {props.type !== "textarea" ? (
+          <input
+            {...props}
+            className={`w-full pl-10 pr-3 py-2.5 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-lg focus:outline-none transition-all text-sm
+              ${
+                error
+                  ? "border-red-300 focus:border-red-500 focus:ring-red-200"
+                  : "border-gray-200 focus:border-blue-500 focus:ring-blue-200"
+              } focus:ring-2`} // Medium padding
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+          />
+        ) : (
+          <textarea
+            {...props}
+            className={`w-full pl-10 pr-3 py-2.5 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-lg focus:outline-none transition-all text-sm
+              ${
+                error
+                  ? "border-red-300 focus:border-red-500 focus:ring-red-200"
+                  : "border-gray-200 focus:border-blue-500 focus:ring-blue-200"
+              } focus:ring-2`} // Medium padding
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+          />
+        )}
+        <motion.div
+          className="absolute bottom-0 left-0 h-0.5 bg-blue-500"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: isFocused ? 1 : 0 }}
+          transition={{ duration: 0.2 }}
+        />
+      </motion.div>
+      <AnimatePresence>
+        {error && (
+          <motion.p
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            className="text-red-500 text-xs mt-1 ml-1"
+          >
+            {error}
+          </motion.p>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  )
+}
+
+// 3. SuccessAnimation component removed
+
+function FormPopup({ isOpen, onClose }) {
+  const navigate = useNavigate() // 4. Initialize useNavigate
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    country: "",
+  })
+
+  const [errors, setErrors] = useState({})
+  // const [submitMessage, setSubmitMessage] = useState("") // 5. Removed submitMessage state
+  const [submitError, setSubmitError] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    if (errors[e.target.name]) {
+      setErrors((prev) => ({ ...prev, [e.target.name]: "" }))
+    }
+  }
+
+  const validateForm = () => {
+    // ... (validation logic remains the same)
+    const newErrors = {}
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required"
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required"
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address"
+    }
+
+    if (!formData.country) {
+      newErrors.country = "Please select a destination country"
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required"
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if (!validateForm()) return
+
+    setIsSubmitting(true)
+    // setSubmitMessage("") // Removed
+    setSubmitError("")
+
+    try {
+      const contactData = {
+        ...formData,
+        created_at: new Date().toISOString(),
+      }
+
+      // 1. Supabase call REMOVED
+
+      // 2. Formspree call (Now the primary action)
+      const response = await fetch("https://formspree.io/f/mpwkzypd", {
+        method: "POST",
+        body: JSON.stringify(contactData),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      })
+      
+      if (!response.ok) {
+        throw new Error("Form submission failed.")
+      }
+
+      // 6. MODIFIED: Reset form, close popup, and redirect
+      setFormData({ name: "", email: "", message: "", country: "" })
+      onClose() // Close the popup
+      
+      // Redirect to the thank-you page
+      // (Change this URL to match your router setup)
+      navigate("/support/thankyou")
+
+      // 7. REMOVED: setSubmitMessage and setTimeout block
+      
+    } catch (error) {
+      logError(error, { formData })
+      console.error("Detailed error:", error)
+      
+      // MODIFIED: Generalized error handling
+      if (error.message.includes("Failed to fetch")) {
+        setSubmitError("Network error. Please check your internet connection and try again.")
+      } else {
+        setSubmitError("An error occurred while submitting your message. Please try again later.")
+      }
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50"
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            className="bg-white rounded-lg shadow-xl p-6 max-w-md w-full relative"
+          >
+            <button onClick={onClose} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+              <X size={20} />
+            </button>
+            <h3 className="text-xl font-bold text-blue-900 mb-5 text-center">Contact Us</h3>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              
+              <AnimatedInput
+                label="Name"
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                icon={User}
+                error={errors.name}
+                placeholder="Enter your name"
+              />
+
+              <AnimatedInput
+                label="Email"
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                icon={Mail}
+                error={errors.email}
+                placeholder="Enter your email"
+              />
+
+              {/* Destination Country Dropdown */}
+              <motion.div
+                className="relative mb-5"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <label className="block text-sm font-medium text-gray-700 mb-2">Destination Country</label>
+                <motion.div
+                  className={`relative group ${errors.country ? "animate-shake" : ""}`}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors">
+                    <Earth size={18} />
+                  </div>
+                  <select
+                    id="country"
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    className={`w-full pl-10 pr-3 py-2.5 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-lg focus:outline-none transition-all text-sm
+                      ${
+                        errors.country
+                          ? "border-red-300 focus:border-red-500 focus:ring-red-200"
+                          : "border-gray-200 focus:border-blue-500 focus:ring-blue-200"
+                      } focus:ring-2`}
+                  >
+                    <option value="">Select a country</option>
+                    {/* ... all country options ... */}
+                    <option value="USA">United States of America</option>
+                    <option value="AUS">Australia</option>
+                    <option value="CAN">Canada</option>
+                    <option value="GBR">United Kingdom</option>
+                    <option value="NZL">New Zealand</option>
+                    <option value="SGP">Singapore</option>
+                    <option value="ARE">Dubai</option>
+                    <option value="IRL">Ireland</option>
+                    <option value="DEU">Germany</option>
+                    <option value="FRA">France</option>
+                    <option value="SWE">Sweden</option>
+                    <option value="NLD">Netherlands</option>
+                    <option value="AUT">Austria</option>
+                    <option value="DNK">Denmark</option>
+                    <option value="FIN">Finland</option>
+                    <option value="ITA">Italy</option>
+                    <option value="HUN">Hungary</option>
+                    <option value="CHE">Switzerland</option>
+                    <option value="ESP">Spain</option>
+                    <option value="LTU">Lithuania</option>
+                    <option value="CYP">Cyprus</option>
+                    <option value="POL">Poland</option>
+                    <option value="MYS">Malaysia</option>
+                    <option value="MUS">Mauritius</option>
+                    <option value="CHN">China</option>
+                    <option value="VNM">Vietnam</option>
+                    <option value="MLT">Malta</option>
+                    <option value="JPN">Japan</option>
+                    <option value="BEL">Belgium</option>
+                    <option value="RUS">Russia</option>
+                    <option value="KOR">South Korea</option>
+                    <option value="IND">India</option>
+                    <option value="GEO">Georgia</option>
+                    <option value="MCO">Monaco</option>
+                    <option value="HRV">Croatia</option>
+                  </select>
+                  <AnimatePresence>
+                    {errors.country && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -5 }}
+                        className="text-red-500 text-xs mt-1 ml-1"
+                      >
+                        {errors.country}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              </motion.div>
+
+              <AnimatedInput
+                label="Message"
+                type="textarea"
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                icon={MessageSquare}
+                error={errors.message}
+                placeholder="What would you like to tell us?"
+                rows="4"
+              />
+
+              <motion.button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </motion.button>
+
+              {/* Error message */}
+              <AnimatePresence>
+                {submitError && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    className="mt-4 p-3 bg-red-50 border border-red-100 rounded-lg flex items-center gap-2 text-red-700 text-sm"
+                  >
+                    <XCircle size={18} />
+                    <p>{submitError}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </form>
+
+            {/* 8. Success message overlay removed */}
+            
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
+
+export default FormPopup

@@ -1,27 +1,27 @@
 
 // "use client"
 
-// import { useState } from "react"
+// import { useState, useEffect } from "react"
 // import { motion, AnimatePresence } from "framer-motion"
-// import { X, CheckCircle, Sparkles, User, Mail, MessageSquare, Earth } from "lucide-react"
-// import { supabase } from "../../supabase/supabaseClient"
-// import { logError } from "../../utils/logger"
+// import { X, CheckCircle, Sparkles, User, Mail, MessageSquare, Earth, XCircle } from "lucide-react"
+// import { useForm } from "@formspree/react"
+// // Supabase imports are removed
 
-// // Animated input wrapper component (medium size)
+// // Animated input wrapper component
 // const AnimatedInput = ({ label, icon: Icon, error, ...props }) => {
 //   const [isFocused, setIsFocused] = useState(false)
 
 //   return (
 //     <motion.div
-//       className="relative mb-5" // Medium margin-bottom
+//       className="relative mb-5"
 //       initial={{ opacity: 0, y: 10 }}
 //       animate={{ opacity: 1, y: 0 }}
 //       transition={{ duration: 0.3 }}
 //     >
-//       <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label> {/* Medium label */}
+//       <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label>
 //       <motion.div className={`relative group ${error ? "animate-shake" : ""}`} whileTap={{ scale: 0.98 }}>
 //         <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors">
-//           <Icon size={18} /> {/* Medium icon */}
+//           <Icon size={18} />
 //         </div>
 //         {props.type !== "textarea" ? (
 //           <input
@@ -31,7 +31,7 @@
 //                 error
 //                   ? "border-red-300 focus:border-red-500 focus:ring-red-200"
 //                   : "border-gray-200 focus:border-blue-500 focus:ring-blue-200"
-//               } focus:ring-2`} // Medium padding
+//               } focus:ring-2`}
 //             onFocus={() => setIsFocused(true)}
 //             onBlur={() => setIsFocused(false)}
 //           />
@@ -43,7 +43,7 @@
 //                 error
 //                   ? "border-red-300 focus:border-red-500 focus:ring-red-200"
 //                   : "border-gray-200 focus:border-blue-500 focus:ring-blue-200"
-//               } focus:ring-2`} // Medium padding
+//               } focus:ring-2`}
 //             onFocus={() => setIsFocused(true)}
 //             onBlur={() => setIsFocused(false)}
 //           />
@@ -71,7 +71,7 @@
 //   )
 // }
 
-// // Success animation component (medium size)
+// // Success animation component
 // const SuccessAnimation = ({ message }) => (
 //   <motion.div
 //     className="absolute inset-0 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg"
@@ -91,7 +91,7 @@
 //         transition={{ duration: 0.5 }}
 //         className="mb-3 inline-block text-green-500"
 //       >
-//         <CheckCircle size={40} /> {/* Medium icon */}
+//         <CheckCircle size={40} />
 //       </motion.div>
 //       <motion.p
 //         initial={{ opacity: 0, y: 10 }}
@@ -102,7 +102,7 @@
 //         {message}
 //       </motion.p>
 //       <motion.div className="mt-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-//         <Sparkles className="inline-block text-yellow-400" size={24} /> {/* Medium icon */}
+//         <Sparkles className="inline-block text-yellow-400" size={24} />
 //       </motion.div>
 //     </motion.div>
 //   </motion.div>
@@ -118,8 +118,30 @@
 
 //   const [errors, setErrors] = useState({})
 //   const [submitMessage, setSubmitMessage] = useState("")
-//   const [submitError, setSubmitError] = useState("")
-//   const [isSubmitting, setIsSubmitting] = useState(false)
+
+//   // --- Formspree Integration ---
+//   // !! REMEMBER TO REPLACE THIS ID !!
+//   const [state, sendToFormspree] = useForm("mzzkgvkb")
+//   // --- End Formspree Integration ---
+
+
+//   // This effect will run when the Formspree submission is successful
+//   useEffect(() => {
+//     if (state.succeeded) {
+//       setSubmitMessage("Thank you for your message! We'll get back to you soon.")
+
+//       // After 3 seconds, reset the form and close the modal
+//       const timer = setTimeout(() => {
+//         setFormData({ name: "", email: "", message: "", country: "" }) // Reset form fields
+//         setSubmitMessage("") // Hide success message
+//         onClose() // Close the modal
+//       }, 3000)
+      
+//       // Clear the timer if the component unmounts
+//       return () => clearTimeout(timer)
+//     }
+//   }, [state.succeeded, onClose])
+
 
 //   const handleChange = (e) => {
 //     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -153,49 +175,17 @@
 //     return Object.keys(newErrors).length === 0
 //   }
 
-//   const handleSubmit = async (e) => {
+//   // --- Updated handleSubmit for Formspree ---
+//   const handleSubmit = (e) => {
 //     e.preventDefault()
 
 //     if (!validateForm()) return
 
-//     setIsSubmitting(true)
-//     setSubmitMessage("")
-//     setSubmitError("")
-
-//     try {
-//       const contactData = {
-//         ...formData,
-//         created_at: new Date().toISOString(),
-//       }
-
-//       const { error } = await supabase.from("contact").insert([contactData])
-
-//       if (error) throw error
-
-//       setSubmitMessage("Thank you for your message! We'll get back to you soon.")
-
-//       setTimeout(() => {
-//         setFormData({ name: "", email: "", message: "", country: "" })
-//         setSubmitMessage("")
-//         onClose()
-//       }, 3000)
-//     } catch (error) {
-//       logError(error, { formData })
-//       console.error("Detailed error:", error)
-
-//       if (error.message.includes("Failed to fetch")) {
-//         setSubmitError("Network error. Please check your internet connection and try again.")
-//       } else if (error.code === "23505") {
-//         setSubmitError("This email has already been submitted. Please use a different email address.")
-//       } else if (error.code === "42P01") {
-//         setSubmitError("Database configuration error. Please contact support.")
-//       } else {
-//         setSubmitError("An error occurred while submitting your message. Please try again later.")
-//       }
-//     } finally {
-//       setIsSubmitting(false)
-//     }
+//     // Simply send the data to Formspree.
+//     // The useEffect above will handle the success state.
+//     sendToFormspree(formData)
 //   }
+//   // --- End updated handleSubmit ---
 
 //   return (
 //     <AnimatePresence>
@@ -213,10 +203,12 @@
 //             className="bg-white rounded-lg shadow-xl p-6 max-w-md w-full relative"
 //           >
 //             <button onClick={onClose} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
-//               <X size={20} /> {/* Medium close icon */}
+//               <X size={20} />
 //             </button>
-//             <h3 className="text-2xl font-bold text-orange-500 mb-5 text-center">Start Your Journey!</h3> {/* Medium heading */}
-//             <form onSubmit={handleSubmit} className="space-y-5"> {/* Medium spacing between form elements */}
+//             <h3 className="text-2xl font-bold text-orange-500 mb-5 text-center">Start Your Journey!</h3>
+            
+//             <form onSubmit={handleSubmit} className="space-y-5">
+              
 //               <AnimatedInput
 //                 label="Name"
 //                 type="text"
@@ -243,18 +235,18 @@
 
 //               {/* Destination Country Dropdown */}
 //               <motion.div
-//                 className="relative mb-5" // Medium margin-bottom
+//                 className="relative mb-5"
 //                 initial={{ opacity: 0, y: 10 }}
 //                 animate={{ opacity: 1, y: 0 }}
 //                 transition={{ duration: 0.3 }}
 //               >
-//                 <label className="block text-sm font-medium text-gray-700 mb-2">Destination Country</label> {/* Medium label */}
+//                 <label className="block text-sm font-medium text-gray-700 mb-2">Destination Country</label>
 //                 <motion.div
 //                   className={`relative group ${errors.country ? "animate-shake" : ""}`}
 //                   whileTap={{ scale: 0.98 }}
 //                 >
 //                   <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors">
-//                     <Earth size={18} /> {/* Medium icon */}
+//                     <Earth size={18} />
 //                   </div>
 //                   <select
 //                     id="country"
@@ -266,7 +258,7 @@
 //                         errors.country
 //                           ? "border-red-300 focus:border-red-500 focus:ring-red-200"
 //                           : "border-gray-200 focus:border-blue-500 focus:ring-blue-200"
-//                       } focus:ring-2`} // Medium padding
+//                       } focus:ring-2`}
 //                   >
 //                     <option value="">Select a country</option>
 //                     <option value="USA">United States of America</option>
@@ -288,7 +280,7 @@
 //                     <option value="HUN">Hungary</option>
 //                     <option value="CHE">Switzerland</option>
 //                     <option value="ESP">Spain</option>
-//                     <option value="LTU">Lithuania</option>
+//                     <option valueD="LTU">Lithuania</option>
 //                     <option value="CYP">Cyprus</option>
 //                     <option value="POL">Poland</option>
 //                     <option value="MYS">Malaysia</option>
@@ -330,36 +322,36 @@
 //                 icon={MessageSquare}
 //                 error={errors.message}
 //                 placeholder="What would you like to tell us?"
-//                 rows="4" // Medium rows for textarea
+//                 rows="4"
 //               />
 
 //               <motion.button
 //                 type="submit"
-//                 className="w-full bg-orange-500 text-white py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm" // Medium button
+//                 className="w-full bg-orange-500 text-white py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
 //                 whileHover={{ scale: 1.02 }}
 //                 whileTap={{ scale: 0.98 }}
-//                 disabled={isSubmitting}
+//                 disabled={state.submitting} // Use Formspree's submitting state
 //               >
-//                 {isSubmitting ? "Submitting..." : "Submit"}
+//                 {state.submitting ? "Submitting..." : "Submit"}
 //               </motion.button>
 
-//               {/* Error message */}
+//               {/* Error message from Formspree */}
 //               <AnimatePresence>
-//                 {submitError && (
+//                 {state.errors && (
 //                   <motion.div
 //                     initial={{ opacity: 0, y: -5 }}
 //                     animate={{ opacity: 1, y: 0 }}
 //                     exit={{ opacity: 0, y: -5 }}
-//                     className="mt-4 p-3 bg-red-50 border border-red-100 rounded-lg flex items-center gap-2 text-red-700 text-sm" // Medium error message
+//                     className="mt-4 p-3 bg-red-50 border border-red-100 rounded-lg flex items-center gap-2 text-red-700 text-sm"
 //                   >
-//                     <XCircle size={18} /> {/* Medium icon */}
-//                     <p>{submitError}</p>
+//                     <XCircle size={18} />
+//                     <p>Oops! There was an error submitting your message. Please try again.</p>
 //                   </motion.div>
 //                 )}
 //               </AnimatePresence>
 //             </form>
 
-//             {/* Success message overlay */}
+//             {/* Success message overlay (this will be triggered by the useEffect) */}
 //             <AnimatePresence>{submitMessage && <SuccessAnimation message={submitMessage} />}</AnimatePresence>
 //           </motion.div>
 //         </motion.div>
@@ -370,11 +362,10 @@
 
 // export default UniversityForm
 
-"use client"
-
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, CheckCircle, Sparkles, User, Mail, MessageSquare, Earth, XCircle } from "lucide-react"
+import { useNavigate } from "react-router-dom" // <-- Correct import for Vite
 import { useForm } from "@formspree/react"
 // Supabase imports are removed
 
@@ -480,6 +471,7 @@ const SuccessAnimation = ({ message }) => (
 )
 
 function UniversityForm({ isOpen, onClose }) {
+  const navigate = useNavigate() // Initialize the hook
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -496,22 +488,16 @@ function UniversityForm({ isOpen, onClose }) {
   // --- End Formspree Integration ---
 
 
-  // This effect will run when the Formspree submission is successful
+  // --- UPDATED REDIRECT LOGIC ---
   useEffect(() => {
     if (state.succeeded) {
-      setSubmitMessage("Thank you for your message! We'll get back to you soon.")
-
-      // After 3 seconds, reset the form and close the modal
-      const timer = setTimeout(() => {
-        setFormData({ name: "", email: "", message: "", country: "" }) // Reset form fields
-        setSubmitMessage("") // Hide success message
-        onClose() // Close the modal
-      }, 3000)
-      
-      // Clear the timer if the component unmounts
-      return () => clearTimeout(timer)
+      // 1. Navigate FIRST to prevent race condition
+      navigate("/university/thankyou") 
+      // 2. THEN close the modal (which unmounts the component)
+      onClose()
     }
-  }, [state.succeeded, onClose])
+  }, [state.succeeded, onClose, navigate])
+  // --- END UPDATED SECTION ---
 
 
   const handleChange = (e) => {
