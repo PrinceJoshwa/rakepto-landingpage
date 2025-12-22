@@ -320,7 +320,7 @@ useEffect(() => {
               <div className="p-8 pb-6">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
-                    Interior Design
+                    Blog
                   </span>
                   <span className="text-gray-500 text-sm">
                     {formatDate(post.date)}
