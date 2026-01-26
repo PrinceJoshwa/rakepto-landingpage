@@ -150,7 +150,7 @@ function FreeFlightPopup() {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <img
-                    src="https://res.cloudinary.com/dsj3kcbf4/image/upload/v1740853758/crcimg11_txpe0s.png"
+                    src="https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/countries/crcimg11_txpe0s.png?updatedAt=1769441804043"
                     alt="Flight illustration"
                     className="w-full h-full object-contain"
                   />

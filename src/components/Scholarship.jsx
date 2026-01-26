@@ -2408,7 +2408,7 @@ export default function Scholarship() {
         {/* Stats Section */}
         <section
           className="py-16 relative overflow-hidden bg-cover bg-center bg-no-repeat "
-          style={{ backgroundImage: "url('https://res.cloudinary.com/dsj3kcbf4/image/upload/v1740858176/ab_oiaekm.png')" }}
+          style={{ backgroundImage: "url('https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/countries/ab_oiaekm.png?updatedAt=1769441835669')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-600 opacity-80"></div>
 

@@ -76,7 +76,7 @@ function Header() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <motion.div className="flex items-center" whileHover={{ scale: 1.1 }}>
             <Link to="/">
-              <img src="https://res.cloudinary.com/dsj3kcbf4/image/upload/v1741374542/Marketly_logo_1000_x_300_px__20250307_140834_0000_phrgpp.png" alt="Rakepto Logo" className="h-16 w-auto" />
+              <img src="https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/Marketly_logo_1000_x_300_px__20250307_140834_0000_phrgpp.png?updatedAt=1769441720383" alt="Rakepto Logo" className="h-16 w-auto" />
             </Link>
           </motion.div>
 

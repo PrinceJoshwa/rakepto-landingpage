@@ -5,7 +5,7 @@
         "name": "Ravensbourne University London",
         "location": "London",
         "ranking": 1001,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university2_uazko9.jpg?updatedAt=1769441810030",
         "courses": [
           {
             "id": "uk1c1",
@@ -35,7 +35,7 @@
         "name": "University of East London",
         "location": "London",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university3_jsgfnv.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university3_jsgfnv.jpg?updatedAt=1769441811115",
         "courses": [
           {
             "id": "uk2c1",
@@ -65,7 +65,7 @@
         "name": "University of Greenwich",
         "location": "London",
         "ranking": 701,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university17_itz72m.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university17_itz72m.jpg?updatedAt=1769441812207",
         "courses": [
           {
             "id": "uk3c1",
@@ -95,7 +95,7 @@
         "name": "UWTSD",
         "location": "Swansea",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university16_icawji.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university16_icawji.jpg?updatedAt=1769441808300",
         "courses": [
           {
             "id": "uk4c1",
@@ -125,7 +125,7 @@
         "name": "University of Roehampton",
         "location": "London",
         "ranking": 751,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university4_pbqaqb.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university4_pbqaqb.jpg?updatedAt=1769441811181",
         "courses": [
           {
             "id": "uk5c1",
@@ -155,7 +155,7 @@
         "name": "Salford University",
         "location": "Salford",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university5_yjkfp7.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university5_yjkfp7.jpg?updatedAt=1769441806982",
         "courses": [
           {
             "id": "uk6c1",
@@ -185,7 +185,7 @@
         "name": "University of Chester",
         "location": "Chester",
         "ranking": 1001,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university18_huaxfx.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university18_huaxfx.jpg?updatedAt=1769441811154",
         "courses": [
           {
             "id": "uk7c1",
@@ -215,7 +215,7 @@
         "name": "Anglia Ruskin University",
         "location": "Cambridge",
         "ranking": 351,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university6_lxgo5p.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university6_lxgo5p.jpg?updatedAt=1769441810795",
         "courses": [
           {
             "id": "uk8c1",
@@ -245,7 +245,7 @@
         "name": "Ulster University",
         "location": "Northern Ireland",
         "ranking": 601,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university7_dq8s8y.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university7_dq8s8y.jpg?updatedAt=1769441810581",
         "courses": [
           {
             "id": "uk9c1",
@@ -275,7 +275,7 @@
         "name": "Northumbria University",
         "location": "Newcastle upon Tyne",
         "ranking": 401,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university8_rgchdj.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university8_rgchdj.jpg?updatedAt=1769441810675",
         "courses": [
           {
             "id": "uk10c1",
@@ -305,7 +305,7 @@
         "name": "University of Portsmouth",
         "location": "Portsmouth",
         "ranking": 601,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university20_puml92.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university20_puml92.jpg?updatedAt=1769441810040",
         "courses": [
           {
             "id": "uk11c1",
@@ -335,7 +335,7 @@
         "name": "De Montfort University",
         "location": "Leicester",
         "ranking": 601,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164691/university12_w4wxyn.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university12_w4wxyn.jpg?updatedAt=1769441809573",
         "courses": [
           {
             "id": "uk12c1",
@@ -365,7 +365,7 @@
         "name": "Coventry University",
         "location": "Coventry",
         "ranking": 541,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164690/university21_oki852.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university21_oki852.jpg?updatedAt=1769441809873",
         "courses": [
           {
             "id": "uk13c1",
@@ -395,7 +395,7 @@
         "name": "University of Hertfordshire",
         "location": "Hatfield",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university19_c8hrac.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university19_c8hrac.jpg?updatedAt=1769441814174",
         "courses": [
           {
             "id": "uk14c1",
@@ -425,7 +425,7 @@
         "name": "University of Hull",
         "location": "Hull",
         "ranking": 601,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164691/university14_trhabo.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university14_trhabo.jpg?updatedAt=1769441810731",
         "courses": [
           {
             "id": "uk15c1",
@@ -455,7 +455,7 @@
         "name": "Middlesex University",
         "location": "London",
         "ranking": 401,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_35_aijghw.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_35_aijghw.jpg?updatedAt=1769441807420",
         "courses": [
           {
             "id": "uk16c1",
@@ -485,7 +485,7 @@
         "name": "York St John University",
         "location": "York",
         "ranking": 1001,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_33_k6ahpr.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_33_k6ahpr.jpg?updatedAt=1769441808768",
         "courses": [
           {
             "id": "uk17c1",
@@ -515,7 +515,7 @@
         "name": "Buckinghamshire New University",
         "location": "High Wycombe",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165410/image_40_ojvlqp.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_40_ojvlqp.jpg?updatedAt=1769441811200",
         "courses": [
           {
             "id": "uk18c1",
@@ -545,7 +545,7 @@
         "name": "University College Birmingham (UCB)",
         "location": "Birmingham",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165410/image_41_rt5fhi.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_41_rt5fhi.jpg?updatedAt=1769441806193",
         "courses": [
           {
             "id": "uk19c1",
@@ -575,7 +575,7 @@
         "name": "Solent University",
         "location": "Southampton",
         "ranking": 1001,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164691/university12_w4wxyn.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university12_w4wxyn.jpg?updatedAt=1769441809573",
         "courses": [
           {
             "id": "uk20c1",
@@ -605,7 +605,7 @@
         "name": "Aston University",
         "location": "Birmingham",
         "ranking": 451,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university6_lxgo5p.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university6_lxgo5p.jpg?updatedAt=1769441810795",
         "courses": [
           {
             "id": "uk21c1",
@@ -635,7 +635,7 @@
         "name": "Edinburgh Napier University",
         "location": "Edinburgh",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university4_pbqaqb.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university4_pbqaqb.jpg?updatedAt=1769441811181",
         "courses": [
           {
             "id": "uk22c1",
@@ -665,7 +665,7 @@
         "name": "University of Leicester",
         "location": "Leicester",
         "ranking": 301,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university2_uazko9.jpg?updatedAt=1769441810030",
         "courses": [
           {
             "id": "uk23c1",
@@ -695,7 +695,7 @@
         "name": "University of Bedfordshire",
         "location": "Luton",
         "ranking": 1001,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university16_icawji.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university16_icawji.jpg?updatedAt=1769441808300",
         "courses": [
           {
             "id": "uk24c1",
@@ -725,7 +725,7 @@
         "name": "Teesside University",
         "location": "Middlesbrough",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165416/image_29_yccpkg.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_29_yccpkg.jpg?updatedAt=1769441814551",
         "courses": [
           {
             "id": "uk25c1",
@@ -755,7 +755,7 @@
         "name": "Royal Holloway, University of London",
         "location": "Egham",
         "ranking": 251,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_33_k6ahpr.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_33_k6ahpr.jpg?updatedAt=1769441808768",
         "courses": [
           {
             "id": "uk26c1",
@@ -787,7 +787,7 @@
         "name": "Arizona State University",
         "location": "Tempe, AZ",
         "ranking": 205,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university2_uazko9.jpg?updatedAt=1769441810030",
         "courses": [
           {
             "id": "us1c1",
@@ -817,7 +817,7 @@
         "name": "University of Massachusetts Boston",
         "location": "Boston, MA",
         "ranking": 701,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university17_itz72m.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university17_itz72m.jpg?updatedAt=1769441812207",
         "courses": [
           {
             "id": "us2c1",
@@ -847,7 +847,7 @@
         "name": "University of North Texas",
         "location": "Denton, TX",
         "ranking": 651,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university5_yjkfp7.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university5_yjkfp7.jpg?updatedAt=1769441806982",
         "courses": [
           {
             "id": "us3c1",
@@ -877,7 +877,7 @@
         "name": "University of Massachusetts Amherst",
         "location": "Amherst, MA",
         "ranking": 301,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university2_uazko9.jpg?updatedAt=1769441810030",
         "courses": [
           {
             "id": "us4c1",
@@ -907,7 +907,7 @@
         "name": "Long Island University",
         "location": "Brooklyn, NY",
         "ranking": 1001,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university18_huaxfx.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university18_huaxfx.jpg?updatedAt=1769441811154",
         "courses": [
           {
             "id": "us5c1",
@@ -937,7 +937,7 @@
         "name": "University of New Haven",
         "location": "West Haven, CT",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164689/university19_c8hrac.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university19_c8hrac.jpg?updatedAt=1769441814174",
         "courses": [
           {
             "id": "us6c1",
@@ -967,7 +967,7 @@
         "name": "Florida Atlantic University",
         "location": "Boca Raton, FL",
         "ranking": 601,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165409/image_42_sijymi.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_42_sijymi.jpg?updatedAt=1769441805883",
         "courses": [
           {
             "id": "us7c1",
@@ -997,7 +997,7 @@
         "name": "University of Illinois Springfield",
         "location": "Springfield, IL",
         "ranking": 1001,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_34_psu8nb.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_34_psu8nb.jpg?updatedAt=1769441806004",
         "courses": [
           {
             "id": "us8c1",
@@ -1027,7 +1027,7 @@
         "name": "Hult International Business School",
         "location": "Cambridge, MA",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165409/image_42_sijymi.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_42_sijymi.jpg?updatedAt=1769441805883",
         "courses": [
           {
             "id": "us9c1",
@@ -1057,7 +1057,7 @@
         "name": "Queens College",
         "location": "Queens, NY",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_35_aijghw.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_35_aijghw.jpg?updatedAt=1769441807420",
         "courses": [
           {
             "id": "us10c1",
@@ -1089,7 +1089,7 @@
         "name": "Dublin Business School",
         "location": "Dublin",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_33_k6ahpr.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_33_k6ahpr.jpg?updatedAt=1769441808768",
         "courses": [
           {
             "id": "ie1c1",
@@ -1119,7 +1119,7 @@
         "name": "Griffith College Dublin",
         "location": "Dublin",
         "ranking": 1201,
-        "image": "https://placehold.co/400x300",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university4_pbqaqb.jpg?updatedAt=1769441811181",
         "courses": [
           {
             "id": "ie2c1",
@@ -1151,7 +1151,7 @@
         "name": "BSBI",
         "location": "Berlin",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165416/image_30_vo1igl.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_30_vo1igl.jpg?updatedAt=1769441811089",
         "courses": [
           {
             "id": "de1c1",
@@ -1181,7 +1181,7 @@
         "name": "Arden University",
         "location": "Berlin",
         "ranking": 1201,
-        "image": "https://placehold.co/400x300",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_30_vo1igl.jpg?updatedAt=1769441811089",
         "courses": [
           {
             "id": "de2c1",
@@ -1211,7 +1211,7 @@
         "name": "Munich Business School",
         "location": "Munich",
         "ranking": 1001,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165417/image_28_boiycg.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_28_boiycg.jpg?updatedAt=1769441809950",
         "courses": [
           {
             "id": "de3c1",
@@ -1241,7 +1241,7 @@
         "name": "University of Applied Science Europe",
         "location": "Berlin",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165416/image_29_yccpkg.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_29_yccpkg.jpg?updatedAt=1769441814551",
         "courses": [
           {
             "id": "de4c1",
@@ -1271,7 +1271,7 @@
         "name": "Lancaster University",
         "location": "Leipzig",
         "ranking": 135,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university2_uazko9.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university2_uazko9.jpg?updatedAt=1769441810030",
         "courses": [
           {
             "id": "de5c1",
@@ -1301,7 +1301,7 @@
         "name": "GISMA",
         "location": "Berlin",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university3_jsgfnv.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university3_jsgfnv.jpg?updatedAt=1769441811115",
         "courses": [
           {
             "id": "de6c1",
@@ -1333,7 +1333,7 @@
         "name": "Paris School of Business",
         "location": "Paris",
         "ranking": 801,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university16_icawji.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university16_icawji.jpg?updatedAt=1769441808300",
         "courses": [
           {
             "id": "fr1c1",
@@ -1363,7 +1363,7 @@
         "name": "BSBI Paris",
         "location": "Paris",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164687/university4_pbqaqb.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university4_pbqaqb.jpg?updatedAt=1769441811181",
         "courses": [
           {
             "id": "fr2c1",
@@ -1393,7 +1393,7 @@
         "name": "Neoma Business School",
         "location": "Reims",
         "ranking": 401,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164688/university18_huaxfx.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university18_huaxfx.jpg?updatedAt=1769441811154",
         "courses": [
           {
             "id": "fr3c1",
@@ -1423,7 +1423,7 @@
         "name": "SKEMA Business School",
         "location": "Paris",
         "ranking": 501,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736164691/university12_w4wxyn.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/university12_w4wxyn.jpg?updatedAt=1769441809573",
         "courses": [
           {
             "id": "fr4c1",
@@ -1455,7 +1455,7 @@
         "name": "London School of Business and Finance",
         "location": "Singapore",
         "ranking": 1201,
-        "image": "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1736165411/image_34_psu8nb.jpg",
+        "image": "https://ik.imagekit.io/j0xzq9pns/rakepto_2026-01-08_18_21/universities/image_34_psu8nb.jpg?updatedAt=1769441806004",
         "courses": [
           {
             "id": "sg1c1",
