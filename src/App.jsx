@@ -29,6 +29,7 @@ import Scholarship from "./components/Scholarship"
 import Blogs from "./pages/Blogs"
 import BlogPost from "./pages/Blog"
 import Thankyou from "./components/contact/Thankyou"
+import BritishCouncilCertification from "./components/BritishCertificate"
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -69,6 +70,7 @@ useEffect(() => {
       <Hero />
       <Services />
       <PickDestination /> {/* Added PickDestination component */}
+      <BritishCouncilCertification /> 
       <EndToEndSupport />
       <SOP />
       <HowItWorks />
