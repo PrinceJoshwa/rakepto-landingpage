@@ -30,6 +30,20 @@ const languageCourses = [
     features: ["Comprehensive Lessons", "Experienced Instructors", "Speaking Practice", "Cultural Insights"],
   },
   {
+  title: "German B1",
+  description: "Advance your German language proficiency with our Online German B1 Level course.",
+  price: "25,000",
+  duration: "70 Classes",
+  features: [
+    "105 Hours of Extensive Training",
+    "Realistic Mock Tests",
+    "Experienced & Certified Faculty",
+    "Interactive Sessions",
+    // "Classes: Monday to Saturday",
+    // "6 Days a Week"
+  ],
+},
+  {
     title: "IELTS/TOEFL/PTE/DUOLINGO",
     description: "Specialized courses for English proficiency tests.",
     price: "8,000",
